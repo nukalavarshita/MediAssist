@@ -1,0 +1,4048 @@
+{
+  "history": [
+    {
+      "id": 2,
+      "user_id": 1,
+      "session_id": "session-1775986315172",
+      "channel": "chat",
+      "user_message": "gas, bloating, cough",
+      "ai_response": {
+        "extracted_symptoms": {
+          "symptoms": [
+            "cough"
+          ],
+          "raw_text": "gas, bloating, cough",
+          "duration": "not specified",
+          "severity": "moderate",
+          "symptom_count": 1,
+          "red_flags": []
+        },
+        "retrieval": {
+          "context_count": 0,
+          "documents": []
+        },
+        "llm_analysis": {
+          "assessment": "Symptoms reported include cough. A local fallback response was used because no LLM provider was available.",
+          "possible_conditions": [
+            "Viral illness",
+            "Inflammatory condition",
+            "Condition requiring clinical review"
+          ],
+          "explanation": "The fallback engine uses symptom heuristics and retrieved categories, so its confidence is intentionally limited.",
+          "confidence_score": 0.54,
+          "follow_up_questions": [
+            "When did these symptoms start?",
+            "Have the symptoms been getting worse, better, or staying the same?"
+          ],
+          "emergency_warning": "Seek urgent care now if chest pain, severe breathing trouble, or confusion is present.",
+          "lifestyle_advice": [
+            "Hydrate",
+            "Rest",
+            "Track symptom progression"
+          ],
+          "care_plan": [
+            "Review evidence in categories: general",
+            "Discuss with a clinician if symptoms persist"
+          ],
+          "confidence_rationale": "Confidence is limited because this output did not use Gemini or OpenAI generation."
+        },
+        "risk_assessment": {
+          "level": "LOW",
+          "color": "#22c55e",
+          "urgency": "Self-care and monitoring are reasonable unless symptoms worsen",
+          "confidence": 0.72,
+          "risk_score": 15,
+          "factors": {
+            "symptom_count": 1,
+            "chronic_conditions": 0,
+            "age_factor": false,
+            "red_flags": false
+          }
+        },
+        "recommendations": {
+          "doctors": [
+            "Pulmonologist"
+          ],
+          "tests": [
+            "Chest X-ray",
+            "Pulse oximetry",
+            "Sputum culture"
+          ],
+          "precautions": [
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "lifestyle": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "follow_up": "Return for care immediately if breathing trouble, chest pain, confusion, or worsening symptoms develop."
+        },
+        "doctor_recommendations": [
+          {
+            "id": "d002",
+            "name": "Dr. James Okafor",
+            "specialty": "Pulmonologist",
+            "experience_years": 14,
+            "qualifications": [
+              "MD",
+              "FCCP",
+              "Board Certified Pulmonology"
+            ],
+            "hospital": "Metro Respiratory Center",
+            "rating": 4.8,
+            "reviews": 198,
+            "availability": "Tue, Thu, Sat",
+            "languages": [
+              "English"
+            ],
+            "bio": "Expert in asthma, COPD, and sleep-related breathing disorders.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "cough"
+            ],
+            "urgency_note": "Schedule within 1\u20132 weeks"
+          }
+        ],
+        "risk_graph": {
+          "nodes": [
+            {
+              "id": "input",
+              "label": "Patient Input",
+              "type": "input"
+            },
+            {
+              "id": "symptom_0",
+              "label": "Cough",
+              "type": "symptom"
+            },
+            {
+              "id": "rag",
+              "label": "RAG Retrieval",
+              "type": "process"
+            },
+            {
+              "id": "llm",
+              "label": "LLM Analysis",
+              "type": "process"
+            },
+            {
+              "id": "risk",
+              "label": "Risk: LOW",
+              "type": "risk",
+              "color": "#22c55e"
+            },
+            {
+              "id": "condition_0",
+              "label": "Viral illness",
+              "type": "condition"
+            },
+            {
+              "id": "condition_1",
+              "label": "Inflammatory condition",
+              "type": "condition"
+            },
+            {
+              "id": "condition_2",
+              "label": "Condition requiring clinical review",
+              "type": "condition"
+            }
+          ],
+          "edges": [
+            {
+              "from": "input",
+              "to": "symptom_0"
+            },
+            {
+              "from": "symptom_0",
+              "to": "rag"
+            },
+            {
+              "from": "rag",
+              "to": "llm"
+            },
+            {
+              "from": "llm",
+              "to": "risk"
+            },
+            {
+              "from": "risk",
+              "to": "condition_0"
+            },
+            {
+              "from": "risk",
+              "to": "condition_1"
+            },
+            {
+              "from": "risk",
+              "to": "condition_2"
+            }
+          ],
+          "risk_score": 15,
+          "risk_level": "LOW",
+          "risk_color": "#22c55e",
+          "decision_path": [
+            "Symptom Extraction",
+            "RAG Context Retrieval",
+            "LLM Synthesis",
+            "Risk Classification",
+            "Recommendation"
+          ]
+        },
+        "report": {
+          "report_title": "AI Health Assessment Report",
+          "generated_at": "2026-04-12 09:57 UTC",
+          "patient_summary": {
+            "age": 30,
+            "gender": "male",
+            "chronic_conditions": null,
+            "allergies": null,
+            "medications": null
+          },
+          "chief_complaint": "cough",
+          "risk_summary": {
+            "level": "LOW",
+            "score": 15,
+            "urgency": "Self-care and monitoring are reasonable unless symptoms worsen",
+            "confidence": 0.72
+          },
+          "clinical_assessment": "Symptoms reported include cough. A local fallback response was used because no LLM provider was available.",
+          "possible_conditions": [
+            "Viral illness",
+            "Inflammatory condition",
+            "Condition requiring clinical review"
+          ],
+          "explanation": "The fallback engine uses symptom heuristics and retrieved categories, so its confidence is intentionally limited.",
+          "recommended_tests": [
+            "Chest X-ray",
+            "Pulse oximetry",
+            "Sputum culture"
+          ],
+          "recommended_specialists": [
+            "Pulmonologist"
+          ],
+          "lifestyle_advice": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "precautions": [
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "follow_up_questions": [
+            "When did these symptoms start?",
+            "Have the symptoms been getting worse, better, or staying the same?"
+          ],
+          "emergency_warning": "Seek urgent care now if chest pain, severe breathing trouble, or confusion is present.",
+          "ai_explainability": {
+            "key_factors": [
+              "cough"
+            ],
+            "factor_weights": {
+              "cough": 1.0
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          },
+          "disclaimer": "This report is generated by an AI decision support system and is NOT a medical diagnosis. Always consult a qualified healthcare professional."
+        },
+        "advanced_features": {
+          "doctor_recommendation_system": [
+            {
+              "id": "d002",
+              "name": "Dr. James Okafor",
+              "specialty": "Pulmonologist",
+              "experience_years": 14,
+              "qualifications": [
+                "MD",
+                "FCCP",
+                "Board Certified Pulmonology"
+              ],
+              "hospital": "Metro Respiratory Center",
+              "rating": 4.8,
+              "reviews": 198,
+              "availability": "Tue, Thu, Sat",
+              "languages": [
+                "English"
+              ],
+              "bio": "Expert in asthma, COPD, and sleep-related breathing disorders.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "cough"
+              ],
+              "urgency_note": "Schedule within 1\u20132 weeks"
+            }
+          ],
+          "test_suggestion_engine": [
+            "Chest X-ray",
+            "Pulse oximetry",
+            "Sputum culture"
+          ],
+          "smart_follow_up_questions": [
+            "When did these symptoms start?",
+            "Have the symptoms been getting worse, better, or staying the same?"
+          ],
+          "emergency_alert": false,
+          "consultation_summary": {
+            "symptoms": [
+              "cough"
+            ],
+            "top_risk": "LOW",
+            "next_steps": [
+              "Hydrate well and rest.",
+              "Track symptoms, temperature, and triggers."
+            ]
+          },
+          "confidence_score": 0.54,
+          "explainability": {
+            "key_factors": [
+              "cough"
+            ],
+            "factor_weights": {
+              "cough": 1.0
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          }
+        },
+        "agent_pipeline": [
+          "SymptomExtractionAgent",
+          "RetrievalAgent",
+          "DiagnosisAgent",
+          "RiskAssessmentAgent",
+          "RecommendationAgent",
+          "DoctorRecommendationAgent",
+          "RiskDecisionAgent",
+          "ReportGeneratorAgent"
+        ]
+      },
+      "risk_level": "LOW",
+      "confidence_score": 0.54,
+      "created_at": "2026-04-12T09:57:40.308216+00:00"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "session_id": "widget-1775989130218",
+      "channel": "chat",
+      "user_message": "acne, stomach burn",
+      "ai_response": {
+        "extracted_symptoms": {
+          "symptoms": [
+            "acne, stomach burn"
+          ],
+          "raw_text": "acne, stomach burn",
+          "duration": "not specified",
+          "severity": "moderate",
+          "symptom_count": 1,
+          "red_flags": []
+        },
+        "retrieval": {
+          "context_count": 0,
+          "documents": []
+        },
+        "llm_analysis": {
+          "assessment": "Symptoms reported include acne, stomach burn. A local fallback response was used because no LLM provider was available.",
+          "possible_conditions": [
+            "Viral illness",
+            "Inflammatory condition",
+            "Condition requiring clinical review"
+          ],
+          "explanation": "The fallback engine uses symptom heuristics and retrieved categories, so its confidence is intentionally limited.",
+          "confidence_score": 0.54,
+          "follow_up_questions": [
+            "When did these symptoms start?",
+            "Have the symptoms been getting worse, better, or staying the same?"
+          ],
+          "emergency_warning": "Seek urgent care now if chest pain, severe breathing trouble, or confusion is present.",
+          "lifestyle_advice": [
+            "Hydrate",
+            "Rest",
+            "Track symptom progression"
+          ],
+          "care_plan": [
+            "Review evidence in categories: general",
+            "Discuss with a clinician if symptoms persist"
+          ],
+          "confidence_rationale": "Confidence is limited because this output did not use Gemini or OpenAI generation."
+        },
+        "risk_assessment": {
+          "level": "LOW",
+          "color": "#22c55e",
+          "urgency": "Self-care and monitoring are reasonable unless symptoms worsen",
+          "confidence": 0.72,
+          "risk_score": 15,
+          "factors": {
+            "symptom_count": 1,
+            "chronic_conditions": 0,
+            "age_factor": false,
+            "red_flags": false
+          }
+        },
+        "recommendations": {
+          "doctors": [
+            "General Physician"
+          ],
+          "tests": [
+            "Basic clinical assessment"
+          ],
+          "precautions": [
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "lifestyle": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "follow_up": "Return for care immediately if breathing trouble, chest pain, confusion, or worsening symptoms develop."
+        },
+        "doctor_recommendations": [
+          {
+            "id": "d005",
+            "name": "Dr. Aisha Rahman",
+            "specialty": "General Physician",
+            "experience_years": 10,
+            "qualifications": [
+              "MBBS",
+              "MD Internal Medicine"
+            ],
+            "hospital": "Community Health Clinic",
+            "rating": 4.8,
+            "reviews": 567,
+            "availability": "Mon\u2013Sat",
+            "languages": [
+              "English",
+              "Arabic",
+              "Urdu"
+            ],
+            "bio": "Primary care physician focused on preventive medicine and chronic disease management.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "acne, stomach burn"
+            ],
+            "urgency_note": "Schedule within 1\u20132 weeks"
+          }
+        ],
+        "risk_graph": {
+          "nodes": [
+            {
+              "id": "input",
+              "label": "Patient Input",
+              "type": "input"
+            },
+            {
+              "id": "symptom_0",
+              "label": "Acne, Stomach Burn",
+              "type": "symptom"
+            },
+            {
+              "id": "rag",
+              "label": "RAG Retrieval",
+              "type": "process"
+            },
+            {
+              "id": "llm",
+              "label": "LLM Analysis",
+              "type": "process"
+            },
+            {
+              "id": "risk",
+              "label": "Risk: LOW",
+              "type": "risk",
+              "color": "#22c55e"
+            },
+            {
+              "id": "condition_0",
+              "label": "Viral illness",
+              "type": "condition"
+            },
+            {
+              "id": "condition_1",
+              "label": "Inflammatory condition",
+              "type": "condition"
+            },
+            {
+              "id": "condition_2",
+              "label": "Condition requiring clinical review",
+              "type": "condition"
+            }
+          ],
+          "edges": [
+            {
+              "from": "input",
+              "to": "symptom_0"
+            },
+            {
+              "from": "symptom_0",
+              "to": "rag"
+            },
+            {
+              "from": "rag",
+              "to": "llm"
+            },
+            {
+              "from": "llm",
+              "to": "risk"
+            },
+            {
+              "from": "risk",
+              "to": "condition_0"
+            },
+            {
+              "from": "risk",
+              "to": "condition_1"
+            },
+            {
+              "from": "risk",
+              "to": "condition_2"
+            }
+          ],
+          "risk_score": 15,
+          "risk_level": "LOW",
+          "risk_color": "#22c55e",
+          "decision_path": [
+            "Symptom Extraction",
+            "RAG Context Retrieval",
+            "LLM Synthesis",
+            "Risk Classification",
+            "Recommendation"
+          ]
+        },
+        "report": {
+          "report_title": "AI Health Assessment Report",
+          "generated_at": "2026-04-12 10:19 UTC",
+          "patient_summary": {
+            "age": 30,
+            "gender": "male",
+            "chronic_conditions": null,
+            "allergies": null,
+            "medications": null
+          },
+          "chief_complaint": "acne, stomach burn",
+          "risk_summary": {
+            "level": "LOW",
+            "score": 15,
+            "urgency": "Self-care and monitoring are reasonable unless symptoms worsen",
+            "confidence": 0.72
+          },
+          "clinical_assessment": "Symptoms reported include acne, stomach burn. A local fallback response was used because no LLM provider was available.",
+          "possible_conditions": [
+            "Viral illness",
+            "Inflammatory condition",
+            "Condition requiring clinical review"
+          ],
+          "explanation": "The fallback engine uses symptom heuristics and retrieved categories, so its confidence is intentionally limited.",
+          "recommended_tests": [
+            "Basic clinical assessment"
+          ],
+          "recommended_specialists": [
+            "General Physician"
+          ],
+          "lifestyle_advice": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "precautions": [
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "follow_up_questions": [
+            "When did these symptoms start?",
+            "Have the symptoms been getting worse, better, or staying the same?"
+          ],
+          "emergency_warning": "Seek urgent care now if chest pain, severe breathing trouble, or confusion is present.",
+          "ai_explainability": {
+            "key_factors": [
+              "acne, stomach burn"
+            ],
+            "factor_weights": {
+              "acne, stomach burn": 1.0
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          },
+          "disclaimer": "This report is generated by an AI decision support system and is NOT a medical diagnosis. Always consult a qualified healthcare professional."
+        },
+        "advanced_features": {
+          "doctor_recommendation_system": [
+            {
+              "id": "d005",
+              "name": "Dr. Aisha Rahman",
+              "specialty": "General Physician",
+              "experience_years": 10,
+              "qualifications": [
+                "MBBS",
+                "MD Internal Medicine"
+              ],
+              "hospital": "Community Health Clinic",
+              "rating": 4.8,
+              "reviews": 567,
+              "availability": "Mon\u2013Sat",
+              "languages": [
+                "English",
+                "Arabic",
+                "Urdu"
+              ],
+              "bio": "Primary care physician focused on preventive medicine and chronic disease management.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "acne, stomach burn"
+              ],
+              "urgency_note": "Schedule within 1\u20132 weeks"
+            }
+          ],
+          "test_suggestion_engine": [
+            "Basic clinical assessment"
+          ],
+          "smart_follow_up_questions": [
+            "When did these symptoms start?",
+            "Have the symptoms been getting worse, better, or staying the same?"
+          ],
+          "emergency_alert": false,
+          "consultation_summary": {
+            "symptoms": [
+              "acne, stomach burn"
+            ],
+            "top_risk": "LOW",
+            "next_steps": [
+              "Hydrate well and rest.",
+              "Track symptoms, temperature, and triggers."
+            ]
+          },
+          "confidence_score": 0.54,
+          "explainability": {
+            "key_factors": [
+              "acne, stomach burn"
+            ],
+            "factor_weights": {
+              "acne, stomach burn": 1.0
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          }
+        },
+        "agent_pipeline": [
+          "SymptomExtractionAgent",
+          "RetrievalAgent",
+          "DiagnosisAgent",
+          "RiskAssessmentAgent",
+          "RecommendationAgent",
+          "DoctorRecommendationAgent",
+          "RiskDecisionAgent",
+          "ReportGeneratorAgent"
+        ]
+      },
+      "risk_level": "LOW",
+      "confidence_score": 0.54,
+      "created_at": "2026-04-12T10:19:02.895482+00:00"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "session_id": "session-1775989397084",
+      "channel": "chat",
+      "user_message": "heart pain, ear pain, neck stiffness, left hand pain",
+      "ai_response": {
+        "extracted_symptoms": {
+          "symptoms": [
+            "chest pain"
+          ],
+          "raw_text": "heart pain, ear pain, neck stiffness, left hand pain",
+          "duration": "not specified",
+          "severity": "moderate",
+          "symptom_count": 1,
+          "red_flags": []
+        },
+        "retrieval": {
+          "context_count": 0,
+          "documents": []
+        },
+        "llm_analysis": {
+          "assessment": "You reported 1 symptom(s): chest pain. A local fallback was used \u2014 LLM unavailable.",
+          "symptom_breakdown": {
+            "chest pain": "Symptom 'chest pain' noted \u2014 requires clinical evaluation for precise assessment."
+          },
+          "possible_conditions": [
+            {
+              "name": "Viral illness",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Common cause of multi-symptom presentations"
+            },
+            {
+              "name": "Inflammatory condition",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Requires further evaluation"
+            }
+          ],
+          "explanation": "Fallback heuristic engine used. Confidence is limited without LLM generation.",
+          "confidence_score": 0.45,
+          "confidence_rationale": "No LLM available \u2014 heuristic only.",
+          "follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_warning": "Seek urgent care if chest pain, severe breathing difficulty, or confusion is present.",
+          "lifestyle_advice": [
+            "Rest and stay hydrated.",
+            "Monitor temperature every 4\u20136 hours.",
+            "Avoid strenuous activity until symptoms resolve."
+          ],
+          "care_plan": [
+            "Monitor symptoms for 24\u201348 hours.",
+            "Consult a clinician if no improvement.",
+            "Seek emergency care if red-flag symptoms develop."
+          ],
+          "red_flags_detected": [
+            "chest pain"
+          ]
+        },
+        "risk_assessment": {
+          "level": "HIGH",
+          "color": "#ef4444",
+          "urgency": "Immediate attention recommended \u2014 seek emergency care now",
+          "confidence": 0.92,
+          "risk_score": 87,
+          "factors": {
+            "symptom_count": 1,
+            "chronic_conditions": 0,
+            "age_factor": false,
+            "red_flags": true
+          }
+        },
+        "recommendations": {
+          "doctors": [
+            "Cardiologist"
+          ],
+          "tests": [
+            "ECG",
+            "Troponin",
+            "Chest X-ray",
+            "Echo"
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "lifestyle": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "follow_up": "Return for care immediately if breathing trouble, chest pain, confusion, or worsening symptoms develop."
+        },
+        "doctor_recommendations": [
+          {
+            "id": "d001",
+            "name": "Dr. Sarah Chen",
+            "specialty": "Cardiologist",
+            "experience_years": 18,
+            "qualifications": [
+              "MD",
+              "FACC",
+              "Board Certified Cardiology"
+            ],
+            "hospital": "City Heart Institute",
+            "rating": 4.9,
+            "reviews": 312,
+            "availability": "Mon, Wed, Fri",
+            "languages": [
+              "English",
+              "Mandarin"
+            ],
+            "bio": "Specializes in interventional cardiology and heart failure management.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "chest pain"
+            ],
+            "urgency_note": "Urgent consultation recommended"
+          }
+        ],
+        "risk_graph": {
+          "nodes": [
+            {
+              "id": "input",
+              "label": "Patient Input",
+              "type": "input"
+            },
+            {
+              "id": "symptom_0",
+              "label": "Chest Pain",
+              "type": "symptom"
+            },
+            {
+              "id": "rag",
+              "label": "RAG Retrieval",
+              "type": "process"
+            },
+            {
+              "id": "llm",
+              "label": "LLM Analysis",
+              "type": "process"
+            },
+            {
+              "id": "risk",
+              "label": "Risk: HIGH",
+              "type": "risk",
+              "color": "#ef4444"
+            },
+            {
+              "id": "condition_0",
+              "label": {
+                "name": "Viral illness",
+                "likelihood": "medium",
+                "matching_symptoms": [
+                  "chest pain"
+                ],
+                "reasoning": "Common cause of multi-symptom presentations"
+              },
+              "type": "condition"
+            },
+            {
+              "id": "condition_1",
+              "label": {
+                "name": "Inflammatory condition",
+                "likelihood": "low",
+                "matching_symptoms": [
+                  "chest pain"
+                ],
+                "reasoning": "Requires further evaluation"
+              },
+              "type": "condition"
+            }
+          ],
+          "edges": [
+            {
+              "from": "input",
+              "to": "symptom_0"
+            },
+            {
+              "from": "symptom_0",
+              "to": "rag"
+            },
+            {
+              "from": "rag",
+              "to": "llm"
+            },
+            {
+              "from": "llm",
+              "to": "risk"
+            },
+            {
+              "from": "risk",
+              "to": "condition_0"
+            },
+            {
+              "from": "risk",
+              "to": "condition_1"
+            }
+          ],
+          "risk_score": 87,
+          "risk_level": "HIGH",
+          "risk_color": "#ef4444",
+          "decision_path": [
+            "Symptom Extraction",
+            "RAG Context Retrieval",
+            "LLM Synthesis",
+            "Risk Classification",
+            "Recommendation"
+          ]
+        },
+        "report": {
+          "report_title": "AI Health Assessment Report",
+          "generated_at": "2026-04-12 10:33 UTC",
+          "patient_summary": {
+            "age": 30,
+            "gender": "male",
+            "chronic_conditions": null,
+            "allergies": null,
+            "medications": null
+          },
+          "chief_complaint": "chest pain",
+          "risk_summary": {
+            "level": "HIGH",
+            "score": 87,
+            "urgency": "Immediate attention recommended \u2014 seek emergency care now",
+            "confidence": 0.92
+          },
+          "clinical_assessment": "You reported 1 symptom(s): chest pain. A local fallback was used \u2014 LLM unavailable.",
+          "possible_conditions": [
+            {
+              "name": "Viral illness",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Common cause of multi-symptom presentations"
+            },
+            {
+              "name": "Inflammatory condition",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Requires further evaluation"
+            }
+          ],
+          "explanation": "Fallback heuristic engine used. Confidence is limited without LLM generation.",
+          "recommended_tests": [
+            "ECG",
+            "Troponin",
+            "Chest X-ray",
+            "Echo"
+          ],
+          "recommended_specialists": [
+            "Cardiologist"
+          ],
+          "lifestyle_advice": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_warning": "Seek urgent care if chest pain, severe breathing difficulty, or confusion is present.",
+          "ai_explainability": {
+            "key_factors": [
+              "chest pain"
+            ],
+            "factor_weights": {
+              "chest pain": 1.0
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          },
+          "disclaimer": "This report is generated by an AI decision support system and is NOT a medical diagnosis. Always consult a qualified healthcare professional."
+        },
+        "advanced_features": {
+          "doctor_recommendation_system": [
+            {
+              "id": "d001",
+              "name": "Dr. Sarah Chen",
+              "specialty": "Cardiologist",
+              "experience_years": 18,
+              "qualifications": [
+                "MD",
+                "FACC",
+                "Board Certified Cardiology"
+              ],
+              "hospital": "City Heart Institute",
+              "rating": 4.9,
+              "reviews": 312,
+              "availability": "Mon, Wed, Fri",
+              "languages": [
+                "English",
+                "Mandarin"
+              ],
+              "bio": "Specializes in interventional cardiology and heart failure management.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "chest pain"
+              ],
+              "urgency_note": "Urgent consultation recommended"
+            }
+          ],
+          "test_suggestion_engine": [
+            "ECG",
+            "Troponin",
+            "Chest X-ray",
+            "Echo"
+          ],
+          "smart_follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_alert": true,
+          "consultation_summary": {
+            "symptoms": [
+              "chest pain"
+            ],
+            "top_risk": "HIGH",
+            "next_steps": [
+              "Seek urgent or emergency medical attention now.",
+              "Hydrate well and rest."
+            ]
+          },
+          "confidence_score": 0.45,
+          "explainability": {
+            "key_factors": [
+              "chest pain"
+            ],
+            "factor_weights": {
+              "chest pain": 1.0
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          }
+        },
+        "agent_pipeline": [
+          "SymptomExtractionAgent",
+          "RetrievalAgent",
+          "DiagnosisAgent",
+          "RiskAssessmentAgent",
+          "RecommendationAgent",
+          "DoctorRecommendationAgent",
+          "RiskDecisionAgent",
+          "ReportGeneratorAgent"
+        ]
+      },
+      "risk_level": "HIGH",
+      "confidence_score": 0.45,
+      "created_at": "2026-04-12T10:33:01.161564+00:00"
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "session_id": "session-1775994678905",
+      "channel": "chat",
+      "user_message": "heart pain, ear pain, neck stiffness, left hand pain",
+      "ai_response": {
+        "extracted_symptoms": {
+          "symptoms": [
+            "chest pain"
+          ],
+          "raw_text": "heart pain, ear pain, neck stiffness, left hand pain",
+          "duration": "not specified",
+          "severity": "moderate",
+          "symptom_count": 1,
+          "red_flags": []
+        },
+        "retrieval": {
+          "context_count": 0,
+          "documents": []
+        },
+        "llm_analysis": {
+          "assessment": "The patient, a 30-year-old male, reports moderate chest pain. This symptom is a critical red flag requiring immediate medical evaluation to determine its underlying cause, which can range from benign musculoskeletal issues to serious cardiac or pulmonary conditions.",
+          "symptom_breakdown": {
+            "chest pain": "Chest pain is a highly significant symptom that can originate from various systems including cardiac, pulmonary, gastrointestinal, musculoskeletal, or psychological. Its moderate severity and unspecified duration in a 30-year-old male without chronic conditions necessitates urgent investigation to differentiate between potentially life-threatening and less severe etiologies."
+          },
+          "possible_conditions": [
+            {
+              "name": "Musculoskeletal Pain (e.g., Costochondritis, Muscle Strain)",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Musculoskeletal causes are common in young adults and can present as moderate chest pain. This includes inflammation of the cartilage connecting ribs to the breastbone (costochondritis) or muscle strain from physical activity or coughing. Without further details, this remains a possibility."
+            },
+            {
+              "name": "Gastroesophageal Reflux Disease (GERD) / Esophageal Spasm",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Gastrointestinal issues like GERD or esophageal spasm can mimic cardiac pain, presenting as moderate chest pain. These are common conditions across age groups and can occur without prior history."
+            },
+            {
+              "name": "Anxiety / Panic Attack",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Psychological factors, such as anxiety or panic attacks, can manifest as chest pain, often described as sharp or dull, and can be moderate in severity. This is a common cause of chest pain in young, otherwise healthy individuals."
+            },
+            {
+              "name": "Pleurisy / Bronchitis",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Inflammation of the lung lining (pleurisy) or bronchial tubes (bronchitis) can cause chest pain, often sharp and worse with breathing or coughing. While possible, the absence of cough or fever makes it less likely without further information."
+            },
+            {
+              "name": "Cardiac Ischemia / Pericarditis / Myocarditis",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Although less common in a 30-year-old male without known risk factors or chronic conditions, cardiac causes of chest pain, such as angina, pericarditis (inflammation of the heart sac), or myocarditis (inflammation of the heart muscle), must always be considered and ruled out due to their serious nature. Chest pain is a primary symptom for these conditions."
+            }
+          ],
+          "explanation": "The reported moderate chest pain in a 30-year-old male is a non-specific symptom that can stem from various organ systems. Musculoskeletal issues like costochondritis or muscle strain are common and can cause localized chest discomfort. Gastrointestinal conditions such as GERD or esophageal spasm can present with retrosternal pain mimicking cardiac symptoms. Anxiety or panic attacks are also frequent causes of chest pain in this demographic. While less likely without additional symptoms, pulmonary conditions like pleurisy or bronchitis could cause chest pain. Crucially, despite the patient's age and lack of chronic conditions, serious cardiac etiologies such as angina, pericarditis, or myocarditis, though less probable, cannot be excluded without a thorough medical evaluation, making immediate assessment imperative.",
+          "confidence_score": 0.4,
+          "confidence_rationale": "The confidence score is low because 'chest pain' is a single, highly non-specific symptom. Without additional details regarding its character (e.g., sharp, dull, crushing, burning), location, radiation, aggravating/alleviating factors, duration, and associated symptoms (e.g., shortness of breath, palpitations, fever, cough, heartburn), it is impossible to narrow down the potential underlying cause with high certainty. The absence of retrieved medical context further limits the precision of the assessment.",
+          "follow_up_questions": [
+            "Can you describe the chest pain more precisely (e.g., sharp, dull, burning, crushing, pressure, stabbing)?",
+            "Where exactly is the pain located, and does it radiate to your arm, neck, jaw, or back?",
+            "When did the chest pain start, and how long does each episode last? Is it constant or intermittent?",
+            "What makes the pain better or worse (e.g., movement, deep breaths, eating, lying down, exertion, rest)?",
+            "Are you experiencing any other symptoms such as shortness of breath, palpitations, sweating, nausea, dizziness, cough, fever, heartburn, or anxiety?",
+            "Have you had any recent injuries to your chest, strenuous physical activity, or unusual stress?",
+            "Have you noticed any tenderness when pressing on your chest wall?"
+          ],
+          "emergency_warning": "Chest pain is a critical symptom that requires immediate medical evaluation to rule out serious underlying conditions, especially cardiac or pulmonary emergencies. Please seek urgent medical attention.",
+          "lifestyle_advice": [
+            "Given the potential for various causes of chest pain, avoid strenuous physical activity until a medical professional has assessed your condition and cleared you for exercise.",
+            "If the pain is suspected to be related to gastrointestinal issues, consider avoiding large meals, spicy foods, caffeine, and alcohol, especially before bedtime. Elevating the head of your bed may also help.",
+            "If stress or anxiety is a contributing factor, consider stress-reduction techniques such as deep breathing exercises, mindfulness, or light physical activity (once cleared by a doctor)."
+          ],
+          "care_plan": [
+            "Immediately seek urgent medical attention (e.g., emergency department or urgent care clinic) for a comprehensive evaluation of your chest pain.",
+            "Refrain from any strenuous physical activity or self-treating with over-the-counter medications until a medical professional has assessed your condition.",
+            "Follow all diagnostic recommendations (e.g., ECG, blood tests, imaging) and treatment plans provided by your healthcare provider."
+          ],
+          "red_flags_detected": [
+            "chest pain"
+          ],
+          "_critique": {
+            "quality_score": 0.95,
+            "issues": [],
+            "is_acceptable": true,
+            "suggested_improvements": [
+              "The assessment is comprehensive, medically sound, and appropriately cautious given the limited initial input. No significant improvements are suggested."
+            ]
+          }
+        },
+        "risk_assessment": {
+          "level": "HIGH",
+          "color": "#ef4444",
+          "urgency": "Immediate attention recommended \u2014 seek emergency care now",
+          "confidence": 0.92,
+          "risk_score": 87,
+          "factors": {
+            "symptom_count": 1,
+            "chronic_conditions": 0,
+            "age_factor": false,
+            "red_flags": true
+          }
+        },
+        "recommendations": {
+          "doctors": [
+            "Cardiologist"
+          ],
+          "tests": [
+            "ECG",
+            "Troponin",
+            "Chest X-ray",
+            "Echo"
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "lifestyle": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "follow_up": "Return for care immediately if breathing trouble, chest pain, confusion, or worsening symptoms develop."
+        },
+        "doctor_recommendations": [
+          {
+            "id": "d001",
+            "name": "Dr. Sarah Chen",
+            "specialty": "Cardiologist",
+            "experience_years": 18,
+            "qualifications": [
+              "MD",
+              "FACC",
+              "Board Certified Cardiology"
+            ],
+            "hospital": "City Heart Institute",
+            "rating": 4.9,
+            "reviews": 312,
+            "availability": "Mon, Wed, Fri",
+            "languages": [
+              "English",
+              "Mandarin"
+            ],
+            "bio": "Specializes in interventional cardiology and heart failure management.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "chest pain"
+            ],
+            "urgency_note": "Urgent consultation recommended"
+          }
+        ],
+        "risk_graph": {
+          "nodes": [
+            {
+              "id": "input",
+              "label": "Patient Input",
+              "type": "input"
+            },
+            {
+              "id": "symptom_0",
+              "label": "Chest Pain",
+              "type": "symptom"
+            },
+            {
+              "id": "rag",
+              "label": "RAG Retrieval",
+              "type": "process"
+            },
+            {
+              "id": "llm",
+              "label": "LLM Analysis",
+              "type": "process"
+            },
+            {
+              "id": "risk",
+              "label": "Risk: HIGH",
+              "type": "risk",
+              "color": "#ef4444"
+            },
+            {
+              "id": "condition_0",
+              "label": {
+                "name": "Musculoskeletal Pain (e.g., Costochondritis, Muscle Strain)",
+                "likelihood": "medium",
+                "matching_symptoms": [
+                  "chest pain"
+                ],
+                "reasoning": "Musculoskeletal causes are common in young adults and can present as moderate chest pain. This includes inflammation of the cartilage connecting ribs to the breastbone (costochondritis) or muscle strain from physical activity or coughing. Without further details, this remains a possibility."
+              },
+              "type": "condition"
+            },
+            {
+              "id": "condition_1",
+              "label": {
+                "name": "Gastroesophageal Reflux Disease (GERD) / Esophageal Spasm",
+                "likelihood": "medium",
+                "matching_symptoms": [
+                  "chest pain"
+                ],
+                "reasoning": "Gastrointestinal issues like GERD or esophageal spasm can mimic cardiac pain, presenting as moderate chest pain. These are common conditions across age groups and can occur without prior history."
+              },
+              "type": "condition"
+            },
+            {
+              "id": "condition_2",
+              "label": {
+                "name": "Anxiety / Panic Attack",
+                "likelihood": "medium",
+                "matching_symptoms": [
+                  "chest pain"
+                ],
+                "reasoning": "Psychological factors, such as anxiety or panic attacks, can manifest as chest pain, often described as sharp or dull, and can be moderate in severity. This is a common cause of chest pain in young, otherwise healthy individuals."
+              },
+              "type": "condition"
+            }
+          ],
+          "edges": [
+            {
+              "from": "input",
+              "to": "symptom_0"
+            },
+            {
+              "from": "symptom_0",
+              "to": "rag"
+            },
+            {
+              "from": "rag",
+              "to": "llm"
+            },
+            {
+              "from": "llm",
+              "to": "risk"
+            },
+            {
+              "from": "risk",
+              "to": "condition_0"
+            },
+            {
+              "from": "risk",
+              "to": "condition_1"
+            },
+            {
+              "from": "risk",
+              "to": "condition_2"
+            }
+          ],
+          "risk_score": 87,
+          "risk_level": "HIGH",
+          "risk_color": "#ef4444",
+          "decision_path": [
+            "Symptom Extraction",
+            "RAG Context Retrieval",
+            "LLM Synthesis",
+            "Risk Classification",
+            "Recommendation"
+          ]
+        },
+        "report": {
+          "report_title": "AI Health Assessment Report",
+          "generated_at": "2026-04-12 11:52 UTC",
+          "patient_summary": {
+            "age": 30,
+            "gender": "male",
+            "chronic_conditions": null,
+            "allergies": null,
+            "medications": null
+          },
+          "chief_complaint": "chest pain",
+          "risk_summary": {
+            "level": "HIGH",
+            "score": 87,
+            "urgency": "Immediate attention recommended \u2014 seek emergency care now",
+            "confidence": 0.92
+          },
+          "clinical_assessment": "The patient, a 30-year-old male, reports moderate chest pain. This symptom is a critical red flag requiring immediate medical evaluation to determine its underlying cause, which can range from benign musculoskeletal issues to serious cardiac or pulmonary conditions.",
+          "possible_conditions": [
+            {
+              "name": "Musculoskeletal Pain (e.g., Costochondritis, Muscle Strain)",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Musculoskeletal causes are common in young adults and can present as moderate chest pain. This includes inflammation of the cartilage connecting ribs to the breastbone (costochondritis) or muscle strain from physical activity or coughing. Without further details, this remains a possibility."
+            },
+            {
+              "name": "Gastroesophageal Reflux Disease (GERD) / Esophageal Spasm",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Gastrointestinal issues like GERD or esophageal spasm can mimic cardiac pain, presenting as moderate chest pain. These are common conditions across age groups and can occur without prior history."
+            },
+            {
+              "name": "Anxiety / Panic Attack",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Psychological factors, such as anxiety or panic attacks, can manifest as chest pain, often described as sharp or dull, and can be moderate in severity. This is a common cause of chest pain in young, otherwise healthy individuals."
+            },
+            {
+              "name": "Pleurisy / Bronchitis",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Inflammation of the lung lining (pleurisy) or bronchial tubes (bronchitis) can cause chest pain, often sharp and worse with breathing or coughing. While possible, the absence of cough or fever makes it less likely without further information."
+            },
+            {
+              "name": "Cardiac Ischemia / Pericarditis / Myocarditis",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Although less common in a 30-year-old male without known risk factors or chronic conditions, cardiac causes of chest pain, such as angina, pericarditis (inflammation of the heart sac), or myocarditis (inflammation of the heart muscle), must always be considered and ruled out due to their serious nature. Chest pain is a primary symptom for these conditions."
+            }
+          ],
+          "explanation": "The reported moderate chest pain in a 30-year-old male is a non-specific symptom that can stem from various organ systems. Musculoskeletal issues like costochondritis or muscle strain are common and can cause localized chest discomfort. Gastrointestinal conditions such as GERD or esophageal spasm can present with retrosternal pain mimicking cardiac symptoms. Anxiety or panic attacks are also frequent causes of chest pain in this demographic. While less likely without additional symptoms, pulmonary conditions like pleurisy or bronchitis could cause chest pain. Crucially, despite the patient's age and lack of chronic conditions, serious cardiac etiologies such as angina, pericarditis, or myocarditis, though less probable, cannot be excluded without a thorough medical evaluation, making immediate assessment imperative.",
+          "recommended_tests": [
+            "ECG",
+            "Troponin",
+            "Chest X-ray",
+            "Echo"
+          ],
+          "recommended_specialists": [
+            "Cardiologist"
+          ],
+          "lifestyle_advice": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "follow_up_questions": [
+            "Can you describe the chest pain more precisely (e.g., sharp, dull, burning, crushing, pressure, stabbing)?",
+            "Where exactly is the pain located, and does it radiate to your arm, neck, jaw, or back?",
+            "When did the chest pain start, and how long does each episode last? Is it constant or intermittent?",
+            "What makes the pain better or worse (e.g., movement, deep breaths, eating, lying down, exertion, rest)?",
+            "Are you experiencing any other symptoms such as shortness of breath, palpitations, sweating, nausea, dizziness, cough, fever, heartburn, or anxiety?",
+            "Have you had any recent injuries to your chest, strenuous physical activity, or unusual stress?",
+            "Have you noticed any tenderness when pressing on your chest wall?"
+          ],
+          "emergency_warning": "Chest pain is a critical symptom that requires immediate medical evaluation to rule out serious underlying conditions, especially cardiac or pulmonary emergencies. Please seek urgent medical attention.",
+          "ai_explainability": {
+            "key_factors": [
+              "chest pain"
+            ],
+            "factor_weights": {
+              "chest pain": 1.0
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          },
+          "disclaimer": "This report is generated by an AI decision support system and is NOT a medical diagnosis. Always consult a qualified healthcare professional."
+        },
+        "advanced_features": {
+          "doctor_recommendation_system": [
+            {
+              "id": "d001",
+              "name": "Dr. Sarah Chen",
+              "specialty": "Cardiologist",
+              "experience_years": 18,
+              "qualifications": [
+                "MD",
+                "FACC",
+                "Board Certified Cardiology"
+              ],
+              "hospital": "City Heart Institute",
+              "rating": 4.9,
+              "reviews": 312,
+              "availability": "Mon, Wed, Fri",
+              "languages": [
+                "English",
+                "Mandarin"
+              ],
+              "bio": "Specializes in interventional cardiology and heart failure management.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "chest pain"
+              ],
+              "urgency_note": "Urgent consultation recommended"
+            }
+          ],
+          "test_suggestion_engine": [
+            "ECG",
+            "Troponin",
+            "Chest X-ray",
+            "Echo"
+          ],
+          "smart_follow_up_questions": [
+            "Can you describe the chest pain more precisely (e.g., sharp, dull, burning, crushing, pressure, stabbing)?",
+            "Where exactly is the pain located, and does it radiate to your arm, neck, jaw, or back?",
+            "When did the chest pain start, and how long does each episode last? Is it constant or intermittent?",
+            "What makes the pain better or worse (e.g., movement, deep breaths, eating, lying down, exertion, rest)?",
+            "Are you experiencing any other symptoms such as shortness of breath, palpitations, sweating, nausea, dizziness, cough, fever, heartburn, or anxiety?",
+            "Have you had any recent injuries to your chest, strenuous physical activity, or unusual stress?",
+            "Have you noticed any tenderness when pressing on your chest wall?"
+          ],
+          "emergency_alert": true,
+          "consultation_summary": {
+            "symptoms": [
+              "chest pain"
+            ],
+            "top_risk": "HIGH",
+            "next_steps": [
+              "Seek urgent or emergency medical attention now.",
+              "Hydrate well and rest."
+            ]
+          },
+          "confidence_score": 0.4,
+          "explainability": {
+            "key_factors": [
+              "chest pain"
+            ],
+            "factor_weights": {
+              "chest pain": 1.0
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          }
+        },
+        "agent_pipeline": [
+          "SymptomExtractionAgent",
+          "RetrievalAgent",
+          "DiagnosisAgent",
+          "RiskAssessmentAgent",
+          "RecommendationAgent",
+          "DoctorRecommendationAgent",
+          "RiskDecisionAgent",
+          "ReportGeneratorAgent"
+        ]
+      },
+      "risk_level": "HIGH",
+      "confidence_score": 0.4,
+      "created_at": "2026-04-12T11:52:04.137900+00:00"
+    },
+    {
+      "id": 8,
+      "user_id": 1,
+      "session_id": "session-1776001202309",
+      "channel": "chat",
+      "user_message": "heart pain, ear pain, neck stiffness, left hand pain",
+      "ai_response": {
+        "extracted_symptoms": {
+          "symptoms": [
+            "chest pain"
+          ],
+          "raw_text": "heart pain, ear pain, neck stiffness, left hand pain",
+          "duration": "not specified",
+          "severity": "moderate",
+          "symptom_count": 1,
+          "red_flags": []
+        },
+        "retrieval": {
+          "context_count": 0,
+          "documents": []
+        },
+        "llm_analysis": {
+          "assessment": "The patient, a 30-year-old male, reports moderate chest pain. This symptom is a significant red flag and necessitates prompt medical evaluation to differentiate between various potential causes, ranging from benign musculoskeletal issues to serious cardiac or pulmonary conditions.",
+          "symptom_breakdown": {
+            "chest pain": "Chest pain is a critical symptom that can indicate a wide range of conditions affecting the heart, lungs, esophagus, muscles, or nerves in the chest. Its moderate severity and lack of further description (e.g., character, radiation, aggravating/alleviating factors, duration) make it non-specific, necessitating immediate and thorough investigation."
+          },
+          "possible_conditions": [
+            {
+              "name": "Musculoskeletal Pain (e.g., Costochondritis, Muscle Strain)",
+              "likelihood": "high",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Musculoskeletal causes are common in all age groups and can present as localized chest pain, often reproducible with palpation or exacerbated by movement or deep breaths. Given the patient's age and lack of chronic conditions, this is a frequent benign cause."
+            },
+            {
+              "name": "Gastroesophageal Reflux Disease (GERD)",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "GERD is a common condition that can manifest as burning chest pain, sometimes mistaken for cardiac pain. It may be worse after meals or when lying down."
+            },
+            {
+              "name": "Anxiety/Panic Attack",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Psychological factors like anxiety or panic attacks can cause chest pain, often accompanied by other symptoms such as shortness of breath, palpitations, or a sense of dread, though these are not reported here."
+            },
+            {
+              "name": "Cardiac Ischemia (Angina/Myocardial Infarction)",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "While less common in a 30-year-old male without known cardiac risk factors, chest pain is the hallmark symptom of cardiac ischemia and must always be considered due to the potential for severe outcomes. It cannot be ruled out without further clinical assessment."
+            },
+            {
+              "name": "Pericarditis",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Inflammation of the pericardium can cause sharp, pleuritic chest pain, often worse when lying down and relieved by leaning forward. While less common, it's a cardiac cause of chest pain that should be considered."
+            }
+          ],
+          "explanation": "The reported moderate chest pain in a 30-year-old male without chronic conditions or allergies is a broad symptom that requires urgent evaluation. Musculoskeletal causes like costochondritis or muscle strain are common and often present as localized chest pain, potentially exacerbated by movement or pressure. Gastroesophageal reflux disease (GERD) can also cause chest pain, typically described as burning. Anxiety or panic attacks are another possibility, where chest pain can be a prominent feature. While less common in this age group without risk factors, serious cardiac conditions such as angina or myocardial infarction, or inflammatory conditions like pericarditis, must always be considered due to the potential for severe outcomes, making further characterization of the pain crucial.",
+          "confidence_score": 0.3,
+          "confidence_rationale": "The confidence is low because 'chest pain' is a single, non-specific symptom without any accompanying details (e.g., character, radiation, duration, aggravating/alleviating factors, associated symptoms). This lack of detail makes it impossible to narrow down the differential diagnosis effectively or assign higher likelihoods to specific conditions.",
+          "follow_up_questions": [
+            "Can you describe the chest pain more precisely? Is it sharp, dull, aching, burning, crushing, or pressure-like?",
+            "Does the pain radiate anywhere else, such as your arm, neck, jaw, or back?",
+            "What makes the pain better or worse? (e.g., movement, deep breaths, eating, lying down, stress, specific positions)",
+            "When did the chest pain start, and how long does it typically last? Is it constant or intermittent?",
+            "Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, palpitations, sweating, nausea, dizziness, cough, or fever?",
+            "Have you had any recent injuries to your chest, engaged in strenuous physical activity, or experienced significant stress?"
+          ],
+          "emergency_warning": "Immediate medical evaluation is strongly recommended for any new onset or worsening chest pain, as it can be a symptom of serious underlying conditions.",
+          "lifestyle_advice": [
+            "**Stress Management:** Given the potential link between stress/anxiety and chest pain, consider incorporating stress-reducing activities like regular exercise (e.g., walking, jogging), mindfulness, or meditation into your daily routine.",
+            "**Healthy Diet:** Maintain a balanced diet, limiting processed foods, excessive caffeine, and spicy or fatty foods, especially before bedtime, as these can exacerbate gastroesophageal reflux.",
+            "**Regular Physical Activity:** Engage in at least 150 minutes of moderate-intensity aerobic activity or 75 minutes of vigorous-intensity activity per week, along with muscle-strengthening activities on 2 or more days a week, to maintain cardiovascular health and manage stress.",
+            "**Good Posture:** Be mindful of your posture, especially if you spend long hours sitting or working at a desk, as poor posture can contribute to musculoskeletal chest pain."
+          ],
+          "care_plan": [
+            "**Immediate Medical Consultation:** Seek urgent medical attention from a healthcare provider or emergency department to thoroughly evaluate the cause of the chest pain.",
+            "**Symptom Monitoring:** Pay close attention to any changes in the character, severity, or associated symptoms of the chest pain to report accurately to the medical professional.",
+            "**Avoid Self-Treatment:** Do not attempt to self-diagnose or self-treat chest pain, as its causes can be serious and require professional assessment."
+          ],
+          "red_flags_detected": [
+            "chest pain"
+          ],
+          "_critique": {
+            "quality_score": 1.0,
+            "issues": [],
+            "is_acceptable": true,
+            "suggested_improvements": []
+          }
+        },
+        "risk_assessment": {
+          "level": "HIGH",
+          "color": "#ef4444",
+          "urgency": "Immediate attention recommended \u2014 seek emergency care now",
+          "confidence": 0.92,
+          "risk_score": 87,
+          "factors": {
+            "symptom_count": 1,
+            "chronic_conditions": 0,
+            "age_factor": false,
+            "red_flags": true
+          }
+        },
+        "recommendations": {
+          "doctors": [
+            "Cardiologist"
+          ],
+          "tests": [
+            "ECG",
+            "Troponin",
+            "Chest X-ray",
+            "Echo"
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "lifestyle": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "follow_up": "Return for care immediately if breathing trouble, chest pain, confusion, or worsening symptoms develop."
+        },
+        "doctor_recommendations": [
+          {
+            "id": "d001",
+            "name": "Dr. Sarah Chen",
+            "specialty": "Cardiologist",
+            "experience_years": 18,
+            "qualifications": [
+              "MD",
+              "FACC",
+              "Board Certified Cardiology"
+            ],
+            "hospital": "City Heart Institute",
+            "rating": 4.9,
+            "reviews": 312,
+            "availability": "Mon, Wed, Fri",
+            "languages": [
+              "English",
+              "Mandarin"
+            ],
+            "bio": "Specializes in interventional cardiology and heart failure management.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "chest pain"
+            ],
+            "urgency_note": "Urgent consultation recommended"
+          }
+        ],
+        "risk_graph": {
+          "nodes": [
+            {
+              "id": "input",
+              "label": "Patient Input",
+              "type": "input"
+            },
+            {
+              "id": "symptom_0",
+              "label": "Chest Pain",
+              "type": "symptom"
+            },
+            {
+              "id": "rag",
+              "label": "RAG Retrieval",
+              "type": "process"
+            },
+            {
+              "id": "llm",
+              "label": "LLM Analysis",
+              "type": "process"
+            },
+            {
+              "id": "risk",
+              "label": "Risk: HIGH",
+              "type": "risk",
+              "color": "#ef4444"
+            },
+            {
+              "id": "condition_0",
+              "label": {
+                "name": "Musculoskeletal Pain (e.g., Costochondritis, Muscle Strain)",
+                "likelihood": "high",
+                "matching_symptoms": [
+                  "chest pain"
+                ],
+                "reasoning": "Musculoskeletal causes are common in all age groups and can present as localized chest pain, often reproducible with palpation or exacerbated by movement or deep breaths. Given the patient's age and lack of chronic conditions, this is a frequent benign cause."
+              },
+              "type": "condition"
+            },
+            {
+              "id": "condition_1",
+              "label": {
+                "name": "Gastroesophageal Reflux Disease (GERD)",
+                "likelihood": "medium",
+                "matching_symptoms": [
+                  "chest pain"
+                ],
+                "reasoning": "GERD is a common condition that can manifest as burning chest pain, sometimes mistaken for cardiac pain. It may be worse after meals or when lying down."
+              },
+              "type": "condition"
+            },
+            {
+              "id": "condition_2",
+              "label": {
+                "name": "Anxiety/Panic Attack",
+                "likelihood": "medium",
+                "matching_symptoms": [
+                  "chest pain"
+                ],
+                "reasoning": "Psychological factors like anxiety or panic attacks can cause chest pain, often accompanied by other symptoms such as shortness of breath, palpitations, or a sense of dread, though these are not reported here."
+              },
+              "type": "condition"
+            }
+          ],
+          "edges": [
+            {
+              "from": "input",
+              "to": "symptom_0"
+            },
+            {
+              "from": "symptom_0",
+              "to": "rag"
+            },
+            {
+              "from": "rag",
+              "to": "llm"
+            },
+            {
+              "from": "llm",
+              "to": "risk"
+            },
+            {
+              "from": "risk",
+              "to": "condition_0"
+            },
+            {
+              "from": "risk",
+              "to": "condition_1"
+            },
+            {
+              "from": "risk",
+              "to": "condition_2"
+            }
+          ],
+          "risk_score": 87,
+          "risk_level": "HIGH",
+          "risk_color": "#ef4444",
+          "decision_path": [
+            "Symptom Extraction",
+            "RAG Context Retrieval",
+            "LLM Synthesis",
+            "Risk Classification",
+            "Recommendation"
+          ]
+        },
+        "report": {
+          "report_title": "AI Health Assessment Report",
+          "generated_at": "2026-04-12 13:40 UTC",
+          "patient_summary": {
+            "age": 30,
+            "gender": "male",
+            "chronic_conditions": null,
+            "allergies": null,
+            "medications": null
+          },
+          "chief_complaint": "chest pain",
+          "risk_summary": {
+            "level": "HIGH",
+            "score": 87,
+            "urgency": "Immediate attention recommended \u2014 seek emergency care now",
+            "confidence": 0.92
+          },
+          "clinical_assessment": "The patient, a 30-year-old male, reports moderate chest pain. This symptom is a significant red flag and necessitates prompt medical evaluation to differentiate between various potential causes, ranging from benign musculoskeletal issues to serious cardiac or pulmonary conditions.",
+          "possible_conditions": [
+            {
+              "name": "Musculoskeletal Pain (e.g., Costochondritis, Muscle Strain)",
+              "likelihood": "high",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Musculoskeletal causes are common in all age groups and can present as localized chest pain, often reproducible with palpation or exacerbated by movement or deep breaths. Given the patient's age and lack of chronic conditions, this is a frequent benign cause."
+            },
+            {
+              "name": "Gastroesophageal Reflux Disease (GERD)",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "GERD is a common condition that can manifest as burning chest pain, sometimes mistaken for cardiac pain. It may be worse after meals or when lying down."
+            },
+            {
+              "name": "Anxiety/Panic Attack",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Psychological factors like anxiety or panic attacks can cause chest pain, often accompanied by other symptoms such as shortness of breath, palpitations, or a sense of dread, though these are not reported here."
+            },
+            {
+              "name": "Cardiac Ischemia (Angina/Myocardial Infarction)",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "While less common in a 30-year-old male without known cardiac risk factors, chest pain is the hallmark symptom of cardiac ischemia and must always be considered due to the potential for severe outcomes. It cannot be ruled out without further clinical assessment."
+            },
+            {
+              "name": "Pericarditis",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "chest pain"
+              ],
+              "reasoning": "Inflammation of the pericardium can cause sharp, pleuritic chest pain, often worse when lying down and relieved by leaning forward. While less common, it's a cardiac cause of chest pain that should be considered."
+            }
+          ],
+          "explanation": "The reported moderate chest pain in a 30-year-old male without chronic conditions or allergies is a broad symptom that requires urgent evaluation. Musculoskeletal causes like costochondritis or muscle strain are common and often present as localized chest pain, potentially exacerbated by movement or pressure. Gastroesophageal reflux disease (GERD) can also cause chest pain, typically described as burning. Anxiety or panic attacks are another possibility, where chest pain can be a prominent feature. While less common in this age group without risk factors, serious cardiac conditions such as angina or myocardial infarction, or inflammatory conditions like pericarditis, must always be considered due to the potential for severe outcomes, making further characterization of the pain crucial.",
+          "recommended_tests": [
+            "ECG",
+            "Troponin",
+            "Chest X-ray",
+            "Echo"
+          ],
+          "recommended_specialists": [
+            "Cardiologist"
+          ],
+          "lifestyle_advice": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "follow_up_questions": [
+            "Can you describe the chest pain more precisely? Is it sharp, dull, aching, burning, crushing, or pressure-like?",
+            "Does the pain radiate anywhere else, such as your arm, neck, jaw, or back?",
+            "What makes the pain better or worse? (e.g., movement, deep breaths, eating, lying down, stress, specific positions)",
+            "When did the chest pain start, and how long does it typically last? Is it constant or intermittent?",
+            "Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, palpitations, sweating, nausea, dizziness, cough, or fever?",
+            "Have you had any recent injuries to your chest, engaged in strenuous physical activity, or experienced significant stress?"
+          ],
+          "emergency_warning": "Immediate medical evaluation is strongly recommended for any new onset or worsening chest pain, as it can be a symptom of serious underlying conditions.",
+          "ai_explainability": {
+            "key_factors": [
+              "chest pain"
+            ],
+            "factor_weights": {
+              "chest pain": 1.0
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          },
+          "disclaimer": "This report is generated by an AI decision support system and is NOT a medical diagnosis. Always consult a qualified healthcare professional."
+        },
+        "advanced_features": {
+          "doctor_recommendation_system": [
+            {
+              "id": "d001",
+              "name": "Dr. Sarah Chen",
+              "specialty": "Cardiologist",
+              "experience_years": 18,
+              "qualifications": [
+                "MD",
+                "FACC",
+                "Board Certified Cardiology"
+              ],
+              "hospital": "City Heart Institute",
+              "rating": 4.9,
+              "reviews": 312,
+              "availability": "Mon, Wed, Fri",
+              "languages": [
+                "English",
+                "Mandarin"
+              ],
+              "bio": "Specializes in interventional cardiology and heart failure management.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "chest pain"
+              ],
+              "urgency_note": "Urgent consultation recommended"
+            }
+          ],
+          "test_suggestion_engine": [
+            "ECG",
+            "Troponin",
+            "Chest X-ray",
+            "Echo"
+          ],
+          "smart_follow_up_questions": [
+            "Can you describe the chest pain more precisely? Is it sharp, dull, aching, burning, crushing, or pressure-like?",
+            "Does the pain radiate anywhere else, such as your arm, neck, jaw, or back?",
+            "What makes the pain better or worse? (e.g., movement, deep breaths, eating, lying down, stress, specific positions)",
+            "When did the chest pain start, and how long does it typically last? Is it constant or intermittent?",
+            "Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, palpitations, sweating, nausea, dizziness, cough, or fever?",
+            "Have you had any recent injuries to your chest, engaged in strenuous physical activity, or experienced significant stress?"
+          ],
+          "emergency_alert": true,
+          "consultation_summary": {
+            "symptoms": [
+              "chest pain"
+            ],
+            "top_risk": "HIGH",
+            "next_steps": [
+              "Seek urgent or emergency medical attention now.",
+              "Hydrate well and rest."
+            ]
+          },
+          "confidence_score": 0.3,
+          "explainability": {
+            "key_factors": [
+              "chest pain"
+            ],
+            "factor_weights": {
+              "chest pain": 1.0
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          }
+        },
+        "agent_pipeline": [
+          "SymptomExtractionAgent",
+          "RetrievalAgent",
+          "DiagnosisAgent",
+          "RiskAssessmentAgent",
+          "RecommendationAgent",
+          "DoctorRecommendationAgent",
+          "RiskDecisionAgent",
+          "ReportGeneratorAgent"
+        ]
+      },
+      "risk_level": "HIGH",
+      "confidence_score": 0.3,
+      "created_at": "2026-04-12T13:40:51.668281+00:00"
+    },
+    {
+      "id": 9,
+      "user_id": 1,
+      "session_id": "session-1776023117166",
+      "channel": "chat",
+      "user_message": "heart pain, left hand pain, neck pain, headache",
+      "ai_response": {
+        "extracted_symptoms": {
+          "symptoms": [
+            "headache",
+            "chest pain"
+          ],
+          "raw_text": "heart pain, left hand pain, neck pain, headache",
+          "duration": "not specified",
+          "severity": "moderate",
+          "symptom_count": 2,
+          "red_flags": []
+        },
+        "retrieval": {
+          "context_count": 0,
+          "documents": []
+        },
+        "llm_analysis": {
+          "assessment": "You reported 2 symptom(s): headache, chest pain. A local fallback was used \u2014 LLM unavailable.",
+          "symptom_breakdown": {
+            "headache": "Symptom 'headache' noted \u2014 requires clinical evaluation for precise assessment.",
+            "chest pain": "Symptom 'chest pain' noted \u2014 requires clinical evaluation for precise assessment."
+          },
+          "possible_conditions": [
+            {
+              "name": "Viral illness",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "headache",
+                "chest pain"
+              ],
+              "reasoning": "Common cause of multi-symptom presentations"
+            },
+            {
+              "name": "Inflammatory condition",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "headache"
+              ],
+              "reasoning": "Requires further evaluation"
+            }
+          ],
+          "explanation": "Fallback heuristic engine used. Confidence is limited without LLM generation.",
+          "confidence_score": 0.45,
+          "confidence_rationale": "No LLM available \u2014 heuristic only.",
+          "follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_warning": "Seek urgent care if chest pain, severe breathing difficulty, or confusion is present.",
+          "lifestyle_advice": [
+            "Rest and stay hydrated.",
+            "Monitor temperature every 4\u20136 hours.",
+            "Avoid strenuous activity until symptoms resolve."
+          ],
+          "care_plan": [
+            "Monitor symptoms for 24\u201348 hours.",
+            "Consult a clinician if no improvement.",
+            "Seek emergency care if red-flag symptoms develop."
+          ],
+          "red_flags_detected": [
+            "chest pain"
+          ]
+        },
+        "risk_assessment": {
+          "level": "HIGH",
+          "color": "#ef4444",
+          "urgency": "Immediate medical attention recommended \u2014 seek emergency care now",
+          "confidence": 0.9,
+          "risk_score": 54,
+          "factors": {
+            "symptom_count": 2,
+            "emergency_symptoms": [
+              "chest pain"
+            ],
+            "elevated_symptoms": [],
+            "dangerous_combinations": [],
+            "chronic_conditions": 1,
+            "high_risk_chronic": [],
+            "age": 22,
+            "age_boost": 0,
+            "chronic_boost": 5,
+            "allergy_count": 1
+          },
+          "score_breakdown": {
+            "symptom_base": 12,
+            "emergency_boost": 35,
+            "elevated_boost": 0,
+            "combination_boost": 0,
+            "age_boost": 0,
+            "chronic_boost": 5
+          },
+          "prediction": {
+            "short_term": "Without immediate care, condition may deteriorate rapidly within hours",
+            "if_untreated": "Risk of serious complications or life-threatening outcomes",
+            "recommended_action": "Call emergency services or go to ER immediately",
+            "timeframe": "Act within the next 1 hour"
+          },
+          "red_flags": [
+            "chest pain"
+          ],
+          "worsening_signs": [
+            "Increasing severity or frequency of symptoms",
+            "New symptoms developing alongside existing ones",
+            "Symptoms not improving after 48 hours of self-care",
+            "Fever above 39.5\u00b0C (103\u00b0F)"
+          ]
+        },
+        "recommendations": {
+          "doctors": [
+            "Cardiologist",
+            "Neurologist"
+          ],
+          "tests": [
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain",
+            "ECG",
+            "Troponin",
+            "Chest X-ray"
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "lifestyle": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "follow_up": "Return for care immediately if breathing trouble, chest pain, confusion, or worsening symptoms develop."
+        },
+        "doctor_recommendations": [
+          {
+            "id": "d001",
+            "name": "Dr. Sarah Chen",
+            "specialty": "Cardiologist",
+            "experience_years": 18,
+            "qualifications": [
+              "MD",
+              "FACC",
+              "Board Certified Cardiology"
+            ],
+            "hospital": "City Heart Institute",
+            "rating": 4.9,
+            "reviews": 312,
+            "availability": "Mon, Wed, Fri",
+            "languages": [
+              "English",
+              "Mandarin"
+            ],
+            "bio": "Specializes in interventional cardiology and heart failure management.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "chest pain"
+            ],
+            "urgency_note": "Urgent consultation recommended"
+          },
+          {
+            "id": "d003",
+            "name": "Dr. Priya Sharma",
+            "specialty": "Neurologist",
+            "experience_years": 12,
+            "qualifications": [
+              "MD",
+              "DM Neurology",
+              "Board Certified"
+            ],
+            "hospital": "NeuroHealth Clinic",
+            "rating": 4.7,
+            "reviews": 245,
+            "availability": "Mon, Tue, Thu",
+            "languages": [
+              "English",
+              "Hindi"
+            ],
+            "bio": "Specializes in headache disorders, epilepsy, and stroke management.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "headache"
+            ],
+            "urgency_note": "Urgent consultation recommended"
+          }
+        ],
+        "risk_graph": {
+          "nodes": [
+            {
+              "id": "input",
+              "label": "Patient Input",
+              "type": "input"
+            },
+            {
+              "id": "symptom_0",
+              "label": "Headache",
+              "type": "symptom"
+            },
+            {
+              "id": "symptom_1",
+              "label": "Chest Pain",
+              "type": "symptom"
+            },
+            {
+              "id": "rag",
+              "label": "RAG Retrieval",
+              "type": "process"
+            },
+            {
+              "id": "llm",
+              "label": "LLM Analysis",
+              "type": "process"
+            },
+            {
+              "id": "risk",
+              "label": "Risk: HIGH",
+              "type": "risk",
+              "color": "#ef4444"
+            },
+            {
+              "id": "condition_0",
+              "label": {
+                "name": "Viral illness",
+                "likelihood": "medium",
+                "matching_symptoms": [
+                  "headache",
+                  "chest pain"
+                ],
+                "reasoning": "Common cause of multi-symptom presentations"
+              },
+              "type": "condition"
+            },
+            {
+              "id": "condition_1",
+              "label": {
+                "name": "Inflammatory condition",
+                "likelihood": "low",
+                "matching_symptoms": [
+                  "headache"
+                ],
+                "reasoning": "Requires further evaluation"
+              },
+              "type": "condition"
+            }
+          ],
+          "edges": [
+            {
+              "from": "input",
+              "to": "symptom_0"
+            },
+            {
+              "from": "input",
+              "to": "symptom_1"
+            },
+            {
+              "from": "symptom_0",
+              "to": "rag"
+            },
+            {
+              "from": "symptom_1",
+              "to": "rag"
+            },
+            {
+              "from": "rag",
+              "to": "llm"
+            },
+            {
+              "from": "llm",
+              "to": "risk"
+            },
+            {
+              "from": "risk",
+              "to": "condition_0"
+            },
+            {
+              "from": "risk",
+              "to": "condition_1"
+            }
+          ],
+          "risk_score": 54,
+          "risk_level": "HIGH",
+          "risk_color": "#ef4444",
+          "decision_path": [
+            "Symptom Extraction",
+            "RAG Context Retrieval",
+            "LLM Synthesis",
+            "Risk Classification",
+            "Recommendation"
+          ]
+        },
+        "report": {
+          "report_title": "AI Health Assessment Report",
+          "generated_at": "2026-04-12 19:45 UTC",
+          "patient_summary": {
+            "age": 22,
+            "gender": "Female",
+            "chronic_conditions": [
+              "Seasonal allergies"
+            ],
+            "allergies": [
+              "Penicillin"
+            ],
+            "medications": [
+              "Cetirizine"
+            ]
+          },
+          "chief_complaint": "headache, chest pain",
+          "risk_summary": {
+            "level": "HIGH",
+            "score": 54,
+            "urgency": "Immediate medical attention recommended \u2014 seek emergency care now",
+            "confidence": 0.9
+          },
+          "clinical_assessment": "You reported 2 symptom(s): headache, chest pain. A local fallback was used \u2014 LLM unavailable.",
+          "possible_conditions": [
+            {
+              "name": "Viral illness",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "headache",
+                "chest pain"
+              ],
+              "reasoning": "Common cause of multi-symptom presentations"
+            },
+            {
+              "name": "Inflammatory condition",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "headache"
+              ],
+              "reasoning": "Requires further evaluation"
+            }
+          ],
+          "explanation": "Fallback heuristic engine used. Confidence is limited without LLM generation.",
+          "recommended_tests": [
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain",
+            "ECG",
+            "Troponin",
+            "Chest X-ray"
+          ],
+          "recommended_specialists": [
+            "Cardiologist",
+            "Neurologist"
+          ],
+          "lifestyle_advice": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_warning": "Seek urgent care if chest pain, severe breathing difficulty, or confusion is present.",
+          "ai_explainability": {
+            "key_factors": [
+              "headache",
+              "chest pain"
+            ],
+            "factor_weights": {
+              "headache": 1.0,
+              "chest pain": 0.5
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          },
+          "disclaimer": "This report is generated by an AI decision support system and is NOT a medical diagnosis. Always consult a qualified healthcare professional."
+        },
+        "advanced_features": {
+          "doctor_recommendation_system": [
+            {
+              "id": "d001",
+              "name": "Dr. Sarah Chen",
+              "specialty": "Cardiologist",
+              "experience_years": 18,
+              "qualifications": [
+                "MD",
+                "FACC",
+                "Board Certified Cardiology"
+              ],
+              "hospital": "City Heart Institute",
+              "rating": 4.9,
+              "reviews": 312,
+              "availability": "Mon, Wed, Fri",
+              "languages": [
+                "English",
+                "Mandarin"
+              ],
+              "bio": "Specializes in interventional cardiology and heart failure management.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "chest pain"
+              ],
+              "urgency_note": "Urgent consultation recommended"
+            },
+            {
+              "id": "d003",
+              "name": "Dr. Priya Sharma",
+              "specialty": "Neurologist",
+              "experience_years": 12,
+              "qualifications": [
+                "MD",
+                "DM Neurology",
+                "Board Certified"
+              ],
+              "hospital": "NeuroHealth Clinic",
+              "rating": 4.7,
+              "reviews": 245,
+              "availability": "Mon, Tue, Thu",
+              "languages": [
+                "English",
+                "Hindi"
+              ],
+              "bio": "Specializes in headache disorders, epilepsy, and stroke management.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "headache"
+              ],
+              "urgency_note": "Urgent consultation recommended"
+            }
+          ],
+          "test_suggestion_engine": [
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain",
+            "ECG",
+            "Troponin",
+            "Chest X-ray"
+          ],
+          "smart_follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_alert": true,
+          "consultation_summary": {
+            "symptoms": [
+              "headache",
+              "chest pain"
+            ],
+            "top_risk": "HIGH",
+            "next_steps": [
+              "Seek urgent or emergency medical attention now.",
+              "Hydrate well and rest."
+            ]
+          },
+          "confidence_score": 0.45,
+          "explainability": {
+            "key_factors": [
+              "headache",
+              "chest pain"
+            ],
+            "factor_weights": {
+              "headache": 1.0,
+              "chest pain": 0.5
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          }
+        },
+        "agent_pipeline": [
+          "SymptomExtractionAgent",
+          "RetrievalAgent",
+          "DiagnosisAgent",
+          "RiskAssessmentAgent",
+          "RecommendationAgent",
+          "DoctorRecommendationAgent",
+          "RiskDecisionAgent",
+          "ReportGeneratorAgent"
+        ]
+      },
+      "risk_level": "HIGH",
+      "confidence_score": 0.45,
+      "created_at": "2026-04-12T19:45:21.782844+00:00"
+    },
+    {
+      "id": 10,
+      "user_id": 1,
+      "session_id": "session-1776023458864",
+      "channel": "chat",
+      "user_message": "heart pain, left hand pain, neck pain, headache",
+      "ai_response": {
+        "extracted_symptoms": {
+          "symptoms": [
+            "headache",
+            "chest pain"
+          ],
+          "raw_text": "heart pain, left hand pain, neck pain, headache",
+          "duration": "not specified",
+          "severity": "moderate",
+          "symptom_count": 2,
+          "red_flags": []
+        },
+        "retrieval": {
+          "context_count": 0,
+          "documents": []
+        },
+        "llm_analysis": {
+          "assessment": "You reported 2 symptom(s): headache, chest pain. A local fallback was used \u2014 LLM unavailable.",
+          "symptom_breakdown": {
+            "headache": "Symptom 'headache' noted \u2014 requires clinical evaluation for precise assessment.",
+            "chest pain": "Symptom 'chest pain' noted \u2014 requires clinical evaluation for precise assessment."
+          },
+          "possible_conditions": [
+            {
+              "name": "Viral illness",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "headache",
+                "chest pain"
+              ],
+              "reasoning": "Common cause of multi-symptom presentations"
+            },
+            {
+              "name": "Inflammatory condition",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "headache"
+              ],
+              "reasoning": "Requires further evaluation"
+            }
+          ],
+          "explanation": "Fallback heuristic engine used. Confidence is limited without LLM generation.",
+          "confidence_score": 0.45,
+          "confidence_rationale": "No LLM available \u2014 heuristic only.",
+          "follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_warning": "Seek urgent care if chest pain, severe breathing difficulty, or confusion is present.",
+          "lifestyle_advice": [
+            "Rest and stay hydrated.",
+            "Monitor temperature every 4\u20136 hours.",
+            "Avoid strenuous activity until symptoms resolve."
+          ],
+          "care_plan": [
+            "Monitor symptoms for 24\u201348 hours.",
+            "Consult a clinician if no improvement.",
+            "Seek emergency care if red-flag symptoms develop."
+          ],
+          "red_flags_detected": [
+            "chest pain"
+          ]
+        },
+        "risk_assessment": {
+          "level": "HIGH",
+          "color": "#ef4444",
+          "urgency": "Immediate medical attention recommended \u2014 seek emergency care now",
+          "confidence": 0.9,
+          "risk_score": 54,
+          "factors": {
+            "symptom_count": 2,
+            "emergency_symptoms": [
+              "chest pain"
+            ],
+            "elevated_symptoms": [],
+            "dangerous_combinations": [],
+            "chronic_conditions": 1,
+            "high_risk_chronic": [],
+            "age": 22,
+            "age_boost": 0,
+            "chronic_boost": 5,
+            "allergy_count": 1
+          },
+          "score_breakdown": {
+            "symptom_base": 12,
+            "emergency_boost": 35,
+            "elevated_boost": 0,
+            "combination_boost": 0,
+            "age_boost": 0,
+            "chronic_boost": 5
+          },
+          "prediction": {
+            "short_term": "Without immediate care, condition may deteriorate rapidly within hours",
+            "if_untreated": "Risk of serious complications or life-threatening outcomes",
+            "recommended_action": "Call emergency services or go to ER immediately",
+            "timeframe": "Act within the next 1 hour"
+          },
+          "red_flags": [
+            "chest pain"
+          ],
+          "worsening_signs": [
+            "Increasing severity or frequency of symptoms",
+            "New symptoms developing alongside existing ones",
+            "Symptoms not improving after 48 hours of self-care",
+            "Fever above 39.5\u00b0C (103\u00b0F)"
+          ]
+        },
+        "recommendations": {
+          "doctors": [
+            "Cardiologist",
+            "Neurologist"
+          ],
+          "tests": [
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain",
+            "ECG",
+            "Troponin",
+            "Chest X-ray"
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "lifestyle": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "follow_up": "Return for care immediately if breathing trouble, chest pain, confusion, or worsening symptoms develop."
+        },
+        "doctor_recommendations": [
+          {
+            "id": "d001",
+            "name": "Dr. Sarah Chen",
+            "specialty": "Cardiologist",
+            "experience_years": 18,
+            "qualifications": [
+              "MD",
+              "FACC",
+              "Board Certified Cardiology"
+            ],
+            "hospital": "City Heart Institute",
+            "rating": 4.9,
+            "reviews": 312,
+            "availability": "Mon, Wed, Fri",
+            "languages": [
+              "English",
+              "Mandarin"
+            ],
+            "bio": "Specializes in interventional cardiology and heart failure management.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "chest pain"
+            ],
+            "urgency_note": "Urgent consultation recommended"
+          },
+          {
+            "id": "d003",
+            "name": "Dr. Priya Sharma",
+            "specialty": "Neurologist",
+            "experience_years": 12,
+            "qualifications": [
+              "MD",
+              "DM Neurology",
+              "Board Certified"
+            ],
+            "hospital": "NeuroHealth Clinic",
+            "rating": 4.7,
+            "reviews": 245,
+            "availability": "Mon, Tue, Thu",
+            "languages": [
+              "English",
+              "Hindi"
+            ],
+            "bio": "Specializes in headache disorders, epilepsy, and stroke management.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "headache"
+            ],
+            "urgency_note": "Urgent consultation recommended"
+          }
+        ],
+        "risk_graph": {
+          "nodes": [
+            {
+              "id": "input",
+              "label": "Patient Input",
+              "type": "input"
+            },
+            {
+              "id": "symptom_0",
+              "label": "Headache",
+              "type": "symptom"
+            },
+            {
+              "id": "symptom_1",
+              "label": "Chest Pain",
+              "type": "symptom"
+            },
+            {
+              "id": "rag",
+              "label": "RAG Retrieval",
+              "type": "process"
+            },
+            {
+              "id": "llm",
+              "label": "LLM Analysis",
+              "type": "process"
+            },
+            {
+              "id": "risk",
+              "label": "Risk: HIGH",
+              "type": "risk",
+              "color": "#ef4444"
+            },
+            {
+              "id": "condition_0",
+              "label": {
+                "name": "Viral illness",
+                "likelihood": "medium",
+                "matching_symptoms": [
+                  "headache",
+                  "chest pain"
+                ],
+                "reasoning": "Common cause of multi-symptom presentations"
+              },
+              "type": "condition"
+            },
+            {
+              "id": "condition_1",
+              "label": {
+                "name": "Inflammatory condition",
+                "likelihood": "low",
+                "matching_symptoms": [
+                  "headache"
+                ],
+                "reasoning": "Requires further evaluation"
+              },
+              "type": "condition"
+            }
+          ],
+          "edges": [
+            {
+              "from": "input",
+              "to": "symptom_0"
+            },
+            {
+              "from": "input",
+              "to": "symptom_1"
+            },
+            {
+              "from": "symptom_0",
+              "to": "rag"
+            },
+            {
+              "from": "symptom_1",
+              "to": "rag"
+            },
+            {
+              "from": "rag",
+              "to": "llm"
+            },
+            {
+              "from": "llm",
+              "to": "risk"
+            },
+            {
+              "from": "risk",
+              "to": "condition_0"
+            },
+            {
+              "from": "risk",
+              "to": "condition_1"
+            }
+          ],
+          "risk_score": 54,
+          "risk_level": "HIGH",
+          "risk_color": "#ef4444",
+          "decision_path": [
+            "Symptom Extraction",
+            "RAG Context Retrieval",
+            "LLM Synthesis",
+            "Risk Classification",
+            "Recommendation"
+          ]
+        },
+        "report": {
+          "report_title": "AI Health Assessment Report",
+          "generated_at": "2026-04-12 19:51 UTC",
+          "patient_summary": {
+            "age": 22,
+            "gender": "Female",
+            "chronic_conditions": [
+              "Seasonal allergies"
+            ],
+            "allergies": [
+              "Penicillin"
+            ],
+            "medications": [
+              "Cetirizine"
+            ]
+          },
+          "chief_complaint": "headache, chest pain",
+          "risk_summary": {
+            "level": "HIGH",
+            "score": 54,
+            "urgency": "Immediate medical attention recommended \u2014 seek emergency care now",
+            "confidence": 0.9
+          },
+          "clinical_assessment": "You reported 2 symptom(s): headache, chest pain. A local fallback was used \u2014 LLM unavailable.",
+          "possible_conditions": [
+            {
+              "name": "Viral illness",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "headache",
+                "chest pain"
+              ],
+              "reasoning": "Common cause of multi-symptom presentations"
+            },
+            {
+              "name": "Inflammatory condition",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "headache"
+              ],
+              "reasoning": "Requires further evaluation"
+            }
+          ],
+          "explanation": "Fallback heuristic engine used. Confidence is limited without LLM generation.",
+          "recommended_tests": [
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain",
+            "ECG",
+            "Troponin",
+            "Chest X-ray"
+          ],
+          "recommended_specialists": [
+            "Cardiologist",
+            "Neurologist"
+          ],
+          "lifestyle_advice": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_warning": "Seek urgent care if chest pain, severe breathing difficulty, or confusion is present.",
+          "ai_explainability": {
+            "key_factors": [
+              "headache",
+              "chest pain"
+            ],
+            "factor_weights": {
+              "headache": 1.0,
+              "chest pain": 0.5
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          },
+          "disclaimer": "This report is generated by an AI decision support system and is NOT a medical diagnosis. Always consult a qualified healthcare professional."
+        },
+        "advanced_features": {
+          "doctor_recommendation_system": [
+            {
+              "id": "d001",
+              "name": "Dr. Sarah Chen",
+              "specialty": "Cardiologist",
+              "experience_years": 18,
+              "qualifications": [
+                "MD",
+                "FACC",
+                "Board Certified Cardiology"
+              ],
+              "hospital": "City Heart Institute",
+              "rating": 4.9,
+              "reviews": 312,
+              "availability": "Mon, Wed, Fri",
+              "languages": [
+                "English",
+                "Mandarin"
+              ],
+              "bio": "Specializes in interventional cardiology and heart failure management.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "chest pain"
+              ],
+              "urgency_note": "Urgent consultation recommended"
+            },
+            {
+              "id": "d003",
+              "name": "Dr. Priya Sharma",
+              "specialty": "Neurologist",
+              "experience_years": 12,
+              "qualifications": [
+                "MD",
+                "DM Neurology",
+                "Board Certified"
+              ],
+              "hospital": "NeuroHealth Clinic",
+              "rating": 4.7,
+              "reviews": 245,
+              "availability": "Mon, Tue, Thu",
+              "languages": [
+                "English",
+                "Hindi"
+              ],
+              "bio": "Specializes in headache disorders, epilepsy, and stroke management.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "headache"
+              ],
+              "urgency_note": "Urgent consultation recommended"
+            }
+          ],
+          "test_suggestion_engine": [
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain",
+            "ECG",
+            "Troponin",
+            "Chest X-ray"
+          ],
+          "smart_follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_alert": true,
+          "consultation_summary": {
+            "symptoms": [
+              "headache",
+              "chest pain"
+            ],
+            "top_risk": "HIGH",
+            "next_steps": [
+              "Seek urgent or emergency medical attention now.",
+              "Hydrate well and rest."
+            ]
+          },
+          "confidence_score": 0.45,
+          "explainability": {
+            "key_factors": [
+              "headache",
+              "chest pain"
+            ],
+            "factor_weights": {
+              "headache": 1.0,
+              "chest pain": 0.5
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          }
+        },
+        "agent_pipeline": [
+          "SymptomExtractionAgent",
+          "RAGRetrievalAgent",
+          "LLMDiagnosisAgent",
+          "RiskAssessmentAgent",
+          "RecommendationAgent",
+          "DoctorRecommendationAgent",
+          "RiskDecisionAgent",
+          "ReportGeneratorAgent"
+        ]
+      },
+      "risk_level": "HIGH",
+      "confidence_score": 0.45,
+      "created_at": "2026-04-12T19:51:03.022256+00:00"
+    },
+    {
+      "id": 11,
+      "user_id": 1,
+      "session_id": "session-1776024147642",
+      "channel": "chat",
+      "user_message": "heart pain, left hand pain, neck pain, headache",
+      "ai_response": {
+        "extracted_symptoms": {
+          "symptoms": [
+            "headache",
+            "chest pain"
+          ],
+          "raw_text": "heart pain, left hand pain, neck pain, headache",
+          "duration": "not specified",
+          "severity": "moderate",
+          "symptom_count": 2,
+          "red_flags": []
+        },
+        "retrieval": {
+          "context_count": 0,
+          "documents": []
+        },
+        "llm_analysis": {
+          "assessment": "You reported 2 symptom(s): headache, chest pain. A local fallback was used \u2014 LLM unavailable.",
+          "symptom_breakdown": {
+            "headache": "Symptom 'headache' noted \u2014 requires clinical evaluation for precise assessment.",
+            "chest pain": "Symptom 'chest pain' noted \u2014 requires clinical evaluation for precise assessment."
+          },
+          "possible_conditions": [
+            {
+              "name": "Viral illness",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "headache",
+                "chest pain"
+              ],
+              "reasoning": "Common cause of multi-symptom presentations"
+            },
+            {
+              "name": "Inflammatory condition",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "headache"
+              ],
+              "reasoning": "Requires further evaluation"
+            }
+          ],
+          "explanation": "Fallback heuristic engine used. Confidence is limited without LLM generation.",
+          "confidence_score": 0.45,
+          "confidence_rationale": "No LLM available \u2014 heuristic only.",
+          "follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_warning": "Seek urgent care if chest pain, severe breathing difficulty, or confusion is present.",
+          "lifestyle_advice": [
+            "Rest and stay hydrated.",
+            "Monitor temperature every 4\u20136 hours.",
+            "Avoid strenuous activity until symptoms resolve."
+          ],
+          "care_plan": [
+            "Monitor symptoms for 24\u201348 hours.",
+            "Consult a clinician if no improvement.",
+            "Seek emergency care if red-flag symptoms develop."
+          ],
+          "red_flags_detected": [
+            "chest pain"
+          ]
+        },
+        "risk_assessment": {
+          "level": "HIGH",
+          "color": "#ef4444",
+          "urgency": "Immediate medical attention recommended \u2014 seek emergency care now",
+          "confidence": 0.9,
+          "risk_score": 54,
+          "factors": {
+            "symptom_count": 2,
+            "emergency_symptoms": [
+              "chest pain"
+            ],
+            "elevated_symptoms": [],
+            "dangerous_combinations": [],
+            "chronic_conditions": 1,
+            "high_risk_chronic": [],
+            "age": 22,
+            "age_boost": 0,
+            "chronic_boost": 5,
+            "allergy_count": 1
+          },
+          "score_breakdown": {
+            "symptom_base": 12,
+            "emergency_boost": 35,
+            "elevated_boost": 0,
+            "combination_boost": 0,
+            "age_boost": 0,
+            "chronic_boost": 5
+          },
+          "prediction": {
+            "short_term": "Without immediate care, condition may deteriorate rapidly within hours",
+            "if_untreated": "Risk of serious complications or life-threatening outcomes",
+            "recommended_action": "Call emergency services or go to ER immediately",
+            "timeframe": "Act within the next 1 hour"
+          },
+          "red_flags": [
+            "chest pain"
+          ],
+          "worsening_signs": [
+            "Increasing severity or frequency of symptoms",
+            "New symptoms developing alongside existing ones",
+            "Symptoms not improving after 48 hours of self-care",
+            "Fever above 39.5\u00b0C (103\u00b0F)"
+          ]
+        },
+        "recommendations": {
+          "doctors": [
+            "Cardiologist",
+            "Neurologist"
+          ],
+          "tests": [
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain",
+            "ECG",
+            "Troponin",
+            "Chest X-ray"
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "lifestyle": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "follow_up": "Return for care immediately if breathing trouble, chest pain, confusion, or worsening symptoms develop."
+        },
+        "doctor_recommendations": [
+          {
+            "id": "d001",
+            "name": "Dr. Sarah Chen",
+            "specialty": "Cardiologist",
+            "experience_years": 18,
+            "qualifications": [
+              "MD",
+              "FACC",
+              "Board Certified Cardiology"
+            ],
+            "hospital": "City Heart Institute",
+            "rating": 4.9,
+            "reviews": 312,
+            "availability": "Mon, Wed, Fri",
+            "languages": [
+              "English",
+              "Mandarin"
+            ],
+            "bio": "Specializes in interventional cardiology and heart failure management.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "chest pain"
+            ],
+            "urgency_note": "Urgent consultation recommended"
+          },
+          {
+            "id": "d003",
+            "name": "Dr. Priya Sharma",
+            "specialty": "Neurologist",
+            "experience_years": 12,
+            "qualifications": [
+              "MD",
+              "DM Neurology",
+              "Board Certified"
+            ],
+            "hospital": "NeuroHealth Clinic",
+            "rating": 4.7,
+            "reviews": 245,
+            "availability": "Mon, Tue, Thu",
+            "languages": [
+              "English",
+              "Hindi"
+            ],
+            "bio": "Specializes in headache disorders, epilepsy, and stroke management.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "headache"
+            ],
+            "urgency_note": "Urgent consultation recommended"
+          }
+        ],
+        "risk_graph": {
+          "nodes": [
+            {
+              "id": "input",
+              "label": "Patient Input",
+              "type": "input"
+            },
+            {
+              "id": "symptom_0",
+              "label": "Headache",
+              "type": "symptom"
+            },
+            {
+              "id": "symptom_1",
+              "label": "Chest Pain",
+              "type": "symptom"
+            },
+            {
+              "id": "rag",
+              "label": "RAG Retrieval",
+              "type": "process"
+            },
+            {
+              "id": "llm",
+              "label": "LLM Analysis",
+              "type": "process"
+            },
+            {
+              "id": "risk",
+              "label": "Risk: HIGH",
+              "type": "risk",
+              "color": "#ef4444"
+            },
+            {
+              "id": "condition_0",
+              "label": {
+                "name": "Viral illness",
+                "likelihood": "medium",
+                "matching_symptoms": [
+                  "headache",
+                  "chest pain"
+                ],
+                "reasoning": "Common cause of multi-symptom presentations"
+              },
+              "type": "condition"
+            },
+            {
+              "id": "condition_1",
+              "label": {
+                "name": "Inflammatory condition",
+                "likelihood": "low",
+                "matching_symptoms": [
+                  "headache"
+                ],
+                "reasoning": "Requires further evaluation"
+              },
+              "type": "condition"
+            }
+          ],
+          "edges": [
+            {
+              "from": "input",
+              "to": "symptom_0"
+            },
+            {
+              "from": "input",
+              "to": "symptom_1"
+            },
+            {
+              "from": "symptom_0",
+              "to": "rag"
+            },
+            {
+              "from": "symptom_1",
+              "to": "rag"
+            },
+            {
+              "from": "rag",
+              "to": "llm"
+            },
+            {
+              "from": "llm",
+              "to": "risk"
+            },
+            {
+              "from": "risk",
+              "to": "condition_0"
+            },
+            {
+              "from": "risk",
+              "to": "condition_1"
+            }
+          ],
+          "risk_score": 54,
+          "risk_level": "HIGH",
+          "risk_color": "#ef4444",
+          "decision_path": [
+            "Symptom Extraction",
+            "RAG Context Retrieval",
+            "LLM Synthesis",
+            "Risk Classification",
+            "Recommendation"
+          ]
+        },
+        "report": {
+          "report_title": "AI Health Assessment Report",
+          "generated_at": "2026-04-12 20:03 UTC",
+          "patient_summary": {
+            "age": 22,
+            "gender": "Female",
+            "chronic_conditions": [
+              "Seasonal allergies"
+            ],
+            "allergies": [
+              "Penicillin"
+            ],
+            "medications": [
+              "Cetirizine"
+            ]
+          },
+          "chief_complaint": "headache, chest pain",
+          "risk_summary": {
+            "level": "HIGH",
+            "score": 54,
+            "urgency": "Immediate medical attention recommended \u2014 seek emergency care now",
+            "confidence": 0.9
+          },
+          "clinical_assessment": "You reported 2 symptom(s): headache, chest pain. A local fallback was used \u2014 LLM unavailable.",
+          "possible_conditions": [
+            {
+              "name": "Viral illness",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "headache",
+                "chest pain"
+              ],
+              "reasoning": "Common cause of multi-symptom presentations"
+            },
+            {
+              "name": "Inflammatory condition",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "headache"
+              ],
+              "reasoning": "Requires further evaluation"
+            }
+          ],
+          "explanation": "Fallback heuristic engine used. Confidence is limited without LLM generation.",
+          "recommended_tests": [
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain",
+            "ECG",
+            "Troponin",
+            "Chest X-ray"
+          ],
+          "recommended_specialists": [
+            "Cardiologist",
+            "Neurologist"
+          ],
+          "lifestyle_advice": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "precautions": [
+            "Seek urgent or emergency medical attention now.",
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_warning": "Seek urgent care if chest pain, severe breathing difficulty, or confusion is present.",
+          "ai_explainability": {
+            "key_factors": [
+              "headache",
+              "chest pain"
+            ],
+            "factor_weights": {
+              "headache": 1.0,
+              "chest pain": 0.5
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          },
+          "disclaimer": "This report is generated by an AI decision support system and is NOT a medical diagnosis. Always consult a qualified healthcare professional."
+        },
+        "advanced_features": {
+          "doctor_recommendation_system": [
+            {
+              "id": "d001",
+              "name": "Dr. Sarah Chen",
+              "specialty": "Cardiologist",
+              "experience_years": 18,
+              "qualifications": [
+                "MD",
+                "FACC",
+                "Board Certified Cardiology"
+              ],
+              "hospital": "City Heart Institute",
+              "rating": 4.9,
+              "reviews": 312,
+              "availability": "Mon, Wed, Fri",
+              "languages": [
+                "English",
+                "Mandarin"
+              ],
+              "bio": "Specializes in interventional cardiology and heart failure management.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "chest pain"
+              ],
+              "urgency_note": "Urgent consultation recommended"
+            },
+            {
+              "id": "d003",
+              "name": "Dr. Priya Sharma",
+              "specialty": "Neurologist",
+              "experience_years": 12,
+              "qualifications": [
+                "MD",
+                "DM Neurology",
+                "Board Certified"
+              ],
+              "hospital": "NeuroHealth Clinic",
+              "rating": 4.7,
+              "reviews": 245,
+              "availability": "Mon, Tue, Thu",
+              "languages": [
+                "English",
+                "Hindi"
+              ],
+              "bio": "Specializes in headache disorders, epilepsy, and stroke management.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "headache"
+              ],
+              "urgency_note": "Urgent consultation recommended"
+            }
+          ],
+          "test_suggestion_engine": [
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain",
+            "ECG",
+            "Troponin",
+            "Chest X-ray"
+          ],
+          "smart_follow_up_questions": [
+            "When exactly did each symptom start?",
+            "Have symptoms been getting worse, better, or staying the same?",
+            "Have you taken any medication for these symptoms?"
+          ],
+          "emergency_alert": true,
+          "consultation_summary": {
+            "symptoms": [
+              "headache",
+              "chest pain"
+            ],
+            "top_risk": "HIGH",
+            "next_steps": [
+              "Seek urgent or emergency medical attention now.",
+              "Hydrate well and rest."
+            ]
+          },
+          "confidence_score": 0.45,
+          "explainability": {
+            "key_factors": [
+              "headache",
+              "chest pain"
+            ],
+            "factor_weights": {
+              "headache": 1.0,
+              "chest pain": 0.5
+            },
+            "evidence_categories": [],
+            "reasoning_note": "Output combines symptom matching, retrieved clinical context, and LLM synthesis. It is not a definitive diagnosis.",
+            "rag_documents_used": 0
+          }
+        },
+        "agent_pipeline": [
+          "SymptomExtractionAgent",
+          "RAGRetrievalAgent",
+          "LLMDiagnosisAgent",
+          "RiskAssessmentAgent",
+          "RecommendationAgent",
+          "DoctorRecommendationAgent",
+          "RiskDecisionAgent",
+          "ReportGeneratorAgent"
+        ]
+      },
+      "risk_level": "HIGH",
+      "confidence_score": 0.45,
+      "created_at": "2026-04-12T20:03:37.266062+00:00"
+    },
+    {
+      "id": 12,
+      "user_id": 1,
+      "session_id": "session-1776049877296",
+      "channel": "chat",
+      "user_message": "cold, cough, headache",
+      "ai_response": {
+        "extracted_symptoms": {
+          "symptoms": [
+            "cough",
+            "headache"
+          ],
+          "raw_text": "cold, cough, headache",
+          "duration": "not specified",
+          "severity": "moderate",
+          "symptom_count": 2,
+          "red_flags": []
+        },
+        "retrieval": {
+          "context_count": 0,
+          "documents": []
+        },
+        "llm_analysis": {
+          "assessment": "Thank you for reporting your symptoms. You have described 2 symptom(s): cough, headache. Our AI engine is temporarily unavailable, so this response is generated by our clinical heuristic system. Please consult a healthcare professional for a comprehensive evaluation.",
+          "symptom_breakdown": {
+            "cough": "Your reported symptom of cough warrants clinical evaluation. A thorough assessment requires examination findings and medical history that are beyond the scope of this automated review.",
+            "headache": "Your reported symptom of headache warrants clinical evaluation. A thorough assessment requires examination findings and medical history that are beyond the scope of this automated review."
+          },
+          "possible_conditions": [
+            {
+              "name": "Viral illness (common viral infection)",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "cough",
+                "headache"
+              ],
+              "reasoning": "Multiple concurrent symptoms are commonly associated with viral aetiology, particularly in the absence of specific localising features.",
+              "supporting_evidence": "General clinical knowledge \u2014 RAG context unavailable"
+            },
+            {
+              "name": "Inflammatory condition (systemic inflammation)",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "cough"
+              ],
+              "reasoning": "Systemic symptoms may indicate an inflammatory process requiring further investigation.",
+              "supporting_evidence": "Heuristic assessment only"
+            }
+          ],
+          "explanation": "This assessment has been generated by the heuristic fallback engine due to temporary LLM unavailability. The differential diagnoses presented are based on general symptom patterns and should be interpreted with caution. A full AI-powered assessment with retrieved clinical context will provide significantly more precise guidance. Please seek professional medical advice for an accurate diagnosis.",
+          "confidence_score": 0.35,
+          "confidence_rationale": "Confidence is substantially reduced as this response was generated without LLM synthesis or RAG context retrieval.",
+          "follow_up_questions": [
+            "When did each of your symptoms first appear, and have they changed in character or severity since onset?",
+            "Have you experienced these symptoms previously, and if so, what was the outcome?",
+            "Are you currently taking any medications, including over-the-counter preparations or supplements?"
+          ],
+          "emergency_warning": "Please seek emergency medical attention immediately if you experience chest pain, severe difficulty breathing, sudden confusion, loss of consciousness, or signs of stroke (facial drooping, arm weakness, speech difficulty).",
+          "lifestyle_advice": [
+            "Ensure adequate rest and maintain hydration with at least 2 litres of fluid daily.",
+            "Monitor your temperature every 4\u20136 hours and keep a symptom diary to share with your clinician.",
+            "Avoid strenuous physical activity until your symptoms have been assessed by a healthcare professional."
+          ],
+          "care_plan": [
+            "Immediate: Contact your GP or a telehealth service today to discuss your symptoms.",
+            "Short-term: If symptoms worsen or new symptoms develop, seek urgent medical review.",
+            "Follow-up: Arrange a formal clinical assessment within 48\u201372 hours if symptoms persist."
+          ],
+          "red_flags_detected": [],
+          "clinical_notes": "This is a heuristic-only response. Full AI assessment will be available once the LLM service is restored."
+        },
+        "risk_assessment": {
+          "level": "LOW",
+          "color": "#22c55e",
+          "urgency": "Self-care and monitoring are reasonable unless symptoms worsen",
+          "confidence": 0.7,
+          "risk_score": 19,
+          "factors": {
+            "symptom_count": 2,
+            "emergency_symptoms": [],
+            "elevated_symptoms": [],
+            "dangerous_combinations": [],
+            "chronic_conditions": 1,
+            "high_risk_chronic": [],
+            "age": 22,
+            "age_boost": 0,
+            "chronic_boost": 5,
+            "allergy_count": 1
+          },
+          "score_breakdown": {
+            "symptom_base": 12,
+            "emergency_boost": 0,
+            "elevated_boost": 0,
+            "combination_boost": 0,
+            "age_boost": 0,
+            "chronic_boost": 5
+          },
+          "prediction": {
+            "short_term": "Symptoms may resolve with rest and self-care over 3\u20137 days",
+            "if_untreated": "Low risk of serious complications; monitor for worsening",
+            "recommended_action": "Rest, hydrate, and monitor symptoms. See a doctor if no improvement in 5 days",
+            "timeframe": "Monitor over the next 3\u20135 days"
+          },
+          "red_flags": [],
+          "worsening_signs": [
+            "Increasing severity or frequency of symptoms",
+            "New symptoms developing alongside existing ones",
+            "Symptoms not improving after 48 hours of self-care",
+            "Fever above 39.5\u00b0C (103\u00b0F)"
+          ]
+        },
+        "recommendations": {
+          "doctors": [
+            "Pulmonologist",
+            "Neurologist"
+          ],
+          "tests": [
+            "Chest X-ray",
+            "Pulse oximetry",
+            "Sputum culture",
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain"
+          ],
+          "precautions": [
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "lifestyle": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "follow_up": "Return for care immediately if breathing trouble, chest pain, confusion, or worsening symptoms develop."
+        },
+        "doctor_recommendations": [
+          {
+            "id": "d002",
+            "name": "Dr. James Okafor",
+            "specialty": "Pulmonologist",
+            "experience_years": 14,
+            "qualifications": [
+              "MD",
+              "FCCP",
+              "Board Certified Pulmonology"
+            ],
+            "hospital": "Metro Respiratory Center",
+            "rating": 4.8,
+            "reviews": 198,
+            "availability": "Tue, Thu, Sat",
+            "languages": [
+              "English"
+            ],
+            "bio": "Expert in asthma, COPD, and sleep-related breathing disorders.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "cough"
+            ],
+            "urgency_note": "Schedule within 1\u20132 weeks"
+          },
+          {
+            "id": "d003",
+            "name": "Dr. Priya Sharma",
+            "specialty": "Neurologist",
+            "experience_years": 12,
+            "qualifications": [
+              "MD",
+              "DM Neurology",
+              "Board Certified"
+            ],
+            "hospital": "NeuroHealth Clinic",
+            "rating": 4.7,
+            "reviews": 245,
+            "availability": "Mon, Tue, Thu",
+            "languages": [
+              "English",
+              "Hindi"
+            ],
+            "bio": "Specializes in headache disorders, epilepsy, and stroke management.",
+            "accepts_insurance": true,
+            "match_reasons": [
+              "headache"
+            ],
+            "urgency_note": "Schedule within 1\u20132 weeks"
+          }
+        ],
+        "risk_graph": {
+          "nodes": [
+            {
+              "id": "input",
+              "label": "Patient Input",
+              "type": "input"
+            },
+            {
+              "id": "symptom_0",
+              "label": "Cough",
+              "type": "symptom"
+            },
+            {
+              "id": "symptom_1",
+              "label": "Headache",
+              "type": "symptom"
+            },
+            {
+              "id": "rag",
+              "label": "RAG Retrieval",
+              "type": "process"
+            },
+            {
+              "id": "llm",
+              "label": "LLM Analysis",
+              "type": "process"
+            },
+            {
+              "id": "risk",
+              "label": "Risk: LOW",
+              "type": "risk",
+              "color": "#22c55e"
+            },
+            {
+              "id": "condition_0",
+              "label": {
+                "name": "Viral illness (common viral infection)",
+                "likelihood": "medium",
+                "matching_symptoms": [
+                  "cough",
+                  "headache"
+                ],
+                "reasoning": "Multiple concurrent symptoms are commonly associated with viral aetiology, particularly in the absence of specific localising features.",
+                "supporting_evidence": "General clinical knowledge \u2014 RAG context unavailable"
+              },
+              "type": "condition"
+            },
+            {
+              "id": "condition_1",
+              "label": {
+                "name": "Inflammatory condition (systemic inflammation)",
+                "likelihood": "low",
+                "matching_symptoms": [
+                  "cough"
+                ],
+                "reasoning": "Systemic symptoms may indicate an inflammatory process requiring further investigation.",
+                "supporting_evidence": "Heuristic assessment only"
+              },
+              "type": "condition"
+            }
+          ],
+          "edges": [
+            {
+              "from": "input",
+              "to": "symptom_0"
+            },
+            {
+              "from": "input",
+              "to": "symptom_1"
+            },
+            {
+              "from": "symptom_0",
+              "to": "rag"
+            },
+            {
+              "from": "symptom_1",
+              "to": "rag"
+            },
+            {
+              "from": "rag",
+              "to": "llm"
+            },
+            {
+              "from": "llm",
+              "to": "risk"
+            },
+            {
+              "from": "risk",
+              "to": "condition_0"
+            },
+            {
+              "from": "risk",
+              "to": "condition_1"
+            }
+          ],
+          "risk_score": 19,
+          "risk_level": "LOW",
+          "risk_color": "#22c55e",
+          "decision_path": [
+            "Symptom Extraction",
+            "RAG Context Retrieval",
+            "LLM Synthesis",
+            "Risk Classification",
+            "Recommendation"
+          ]
+        },
+        "report": {
+          "report_title": "AI Health Assessment Report",
+          "generated_at": "2026-04-13 03:12 UTC",
+          "patient_summary": {
+            "age": 22,
+            "gender": "Female",
+            "chronic_conditions": [
+              "Seasonal allergies"
+            ],
+            "allergies": [
+              "Penicillin"
+            ],
+            "medications": [
+              "Cetirizine"
+            ]
+          },
+          "chief_complaint": "cough, headache",
+          "risk_summary": {
+            "level": "LOW",
+            "score": 19,
+            "urgency": "Self-care and monitoring are reasonable unless symptoms worsen",
+            "confidence": 0.7
+          },
+          "clinical_assessment": "Thank you for reporting your symptoms. You have described 2 symptom(s): cough, headache. Our AI engine is temporarily unavailable, so this response is generated by our clinical heuristic system. Please consult a healthcare professional for a comprehensive evaluation.",
+          "possible_conditions": [
+            {
+              "name": "Viral illness (common viral infection)",
+              "likelihood": "medium",
+              "matching_symptoms": [
+                "cough",
+                "headache"
+              ],
+              "reasoning": "Multiple concurrent symptoms are commonly associated with viral aetiology, particularly in the absence of specific localising features.",
+              "supporting_evidence": "General clinical knowledge \u2014 RAG context unavailable"
+            },
+            {
+              "name": "Inflammatory condition (systemic inflammation)",
+              "likelihood": "low",
+              "matching_symptoms": [
+                "cough"
+              ],
+              "reasoning": "Systemic symptoms may indicate an inflammatory process requiring further investigation.",
+              "supporting_evidence": "Heuristic assessment only"
+            }
+          ],
+          "explanation": "This assessment has been generated by the heuristic fallback engine due to temporary LLM unavailability. The differential diagnoses presented are based on general symptom patterns and should be interpreted with caution. A full AI-powered assessment with retrieved clinical context will provide significantly more precise guidance. Please seek professional medical advice for an accurate diagnosis.",
+          "recommended_tests": [
+            "Chest X-ray",
+            "Pulse oximetry",
+            "Sputum culture",
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain"
+          ],
+          "recommended_specialists": [
+            "Pulmonologist",
+            "Neurologist"
+          ],
+          "lifestyle_advice": [
+            "Maintain a consistent sleep schedule of 7\u20139 hours.",
+            "Stay hydrated with at least 8 glasses of water daily.",
+            "Avoid smoking and limit alcohol consumption.",
+            "Engage in moderate physical activity 30 minutes daily."
+          ],
+          "precautions": [
+            "Hydrate well and rest.",
+            "Track symptoms, temperature, and triggers.",
+            "Avoid new over-the-counter medication combinations without clinician guidance."
+          ],
+          "follow_up_questions": [
+            "When did each of your symptoms first appear, and have they changed in character or severity since onset?",
+            "Have you experienced these symptoms previously, and if so, what was the outcome?",
+            "Are you currently taking any medications, including over-the-counter preparations or supplements?"
+          ],
+          "emergency_warning": "Please seek emergency medical attention immediately if you experience chest pain, severe difficulty breathing, sudden confusion, loss of consciousness, or signs of stroke (facial drooping, arm weakness, speech difficulty).",
+          "ai_explainability": {
+            "key_factors": [
+              "headache",
+              "cough"
+            ],
+            "factor_weights": {
+              "headache": 0.65,
+              "cough": 0.6
+            },
+            "rag_evidence": [],
+            "rag_quality_score": 0.0,
+            "rag_documents_used": 0,
+            "agent_reasoning_trace": [
+              {
+                "step": 1,
+                "agent": "SymptomExtractionAgent",
+                "action": "Identified 2 symptom(s) from patient input using keyword matching and NLP",
+                "output": [
+                  "cough",
+                  "headache"
+                ],
+                "confidence": 0.92
+              },
+              {
+                "step": 2,
+                "agent": "RAGRetrievalAgent",
+                "action": "Retrieved 0 relevant medical knowledge documents via vector similarity search",
+                "output": [],
+                "confidence": 0.0
+              },
+              {
+                "step": 3,
+                "agent": "LLMDiagnosisAgent",
+                "action": "Generated clinical assessment using Gemini 2.0 Flash with patient profile and retrieved context",
+                "output": "Structured JSON assessment with conditions, care plan, and follow-up questions",
+                "confidence": 0.85
+              },
+              {
+                "step": 4,
+                "agent": "RiskAssessmentAgent",
+                "action": "Computed multi-factor risk score using symptom severity, patient demographics, and dangerous combinations",
+                "output": "Risk level, score, and trajectory prediction",
+                "confidence": 0.9
+              },
+              {
+                "step": 5,
+                "agent": "RecommendationAgent",
+                "action": "Mapped symptoms to specialist types, diagnostic tests, and evidence-based precautions",
+                "output": "Personalised recommendations, tests, and lifestyle advice",
+                "confidence": 0.88
+              },
+              {
+                "step": 6,
+                "agent": "DoctorRecommendationAgent",
+                "action": "Matched symptoms to specialist database, ranked by rating and experience",
+                "output": "Top-ranked specialists with match reasoning",
+                "confidence": 0.87
+              }
+            ],
+            "evidence_categories": [],
+            "reasoning_note": "This assessment was produced by a multi-agent AI pipeline combining symptom extraction, retrieval-augmented generation (RAG) from a curated medical knowledge base, large language model synthesis, and rule-based risk classification. It is intended as a decision support tool only and does NOT constitute a medical diagnosis.",
+            "limitations": [
+              "This assessment is based solely on self-reported symptoms and does not include physical examination findings.",
+              "Laboratory results, imaging, and clinical history are not available to this system.",
+              "AI-generated assessments carry inherent uncertainty and should not replace professional medical advice.",
+              "Symptom overlap between conditions means multiple diagnoses may be plausible simultaneously.",
+              "No external medical knowledge was retrieved \u2014 assessment relies entirely on LLM training data."
+            ],
+            "data_sources": [
+              "Curated medical knowledge base (29 documents across 12 clinical categories)",
+              "Gemini 2.0 Flash large language model",
+              "Rule-based symptom-risk mapping engine",
+              "Specialist database (10 verified physicians)"
+            ],
+            "pipeline_version": "HealthPilot AI v3.0 \u2014 Multi-Agent Clinical Decision Support"
+          },
+          "disclaimer": "This report is generated by an AI decision support system and is NOT a medical diagnosis. Always consult a qualified healthcare professional."
+        },
+        "advanced_features": {
+          "doctor_recommendation_system": [
+            {
+              "id": "d002",
+              "name": "Dr. James Okafor",
+              "specialty": "Pulmonologist",
+              "experience_years": 14,
+              "qualifications": [
+                "MD",
+                "FCCP",
+                "Board Certified Pulmonology"
+              ],
+              "hospital": "Metro Respiratory Center",
+              "rating": 4.8,
+              "reviews": 198,
+              "availability": "Tue, Thu, Sat",
+              "languages": [
+                "English"
+              ],
+              "bio": "Expert in asthma, COPD, and sleep-related breathing disorders.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "cough"
+              ],
+              "urgency_note": "Schedule within 1\u20132 weeks"
+            },
+            {
+              "id": "d003",
+              "name": "Dr. Priya Sharma",
+              "specialty": "Neurologist",
+              "experience_years": 12,
+              "qualifications": [
+                "MD",
+                "DM Neurology",
+                "Board Certified"
+              ],
+              "hospital": "NeuroHealth Clinic",
+              "rating": 4.7,
+              "reviews": 245,
+              "availability": "Mon, Tue, Thu",
+              "languages": [
+                "English",
+                "Hindi"
+              ],
+              "bio": "Specializes in headache disorders, epilepsy, and stroke management.",
+              "accepts_insurance": true,
+              "match_reasons": [
+                "headache"
+              ],
+              "urgency_note": "Schedule within 1\u20132 weeks"
+            }
+          ],
+          "test_suggestion_engine": [
+            "Chest X-ray",
+            "Pulse oximetry",
+            "Sputum culture",
+            "Blood pressure check",
+            "Neurological exam",
+            "MRI Brain"
+          ],
+          "smart_follow_up_questions": [
+            "When did each of your symptoms first appear, and have they changed in character or severity since onset?",
+            "Have you experienced these symptoms previously, and if so, what was the outcome?",
+            "Are you currently taking any medications, including over-the-counter preparations or supplements?"
+          ],
+          "emergency_alert": false,
+          "consultation_summary": {
+            "symptoms": [
+              "cough",
+              "headache"
+            ],
+            "top_risk": "LOW",
+            "next_steps": [
+              "Hydrate well and rest.",
+              "Track symptoms, temperature, and triggers."
+            ]
+          },
+          "confidence_score": 0.35,
+          "explainability": {
+            "key_factors": [
+              "headache",
+              "cough"
+            ],
+            "factor_weights": {
+              "headache": 0.65,
+              "cough": 0.6
+            },
+            "rag_evidence": [],
+            "rag_quality_score": 0.0,
+            "rag_documents_used": 0,
+            "agent_reasoning_trace": [
+              {
+                "step": 1,
+                "agent": "SymptomExtractionAgent",
+                "action": "Identified 2 symptom(s) from patient input using keyword matching and NLP",
+                "output": [
+                  "cough",
+                  "headache"
+                ],
+                "confidence": 0.92
+              },
+              {
+                "step": 2,
+                "agent": "RAGRetrievalAgent",
+                "action": "Retrieved 0 relevant medical knowledge documents via vector similarity search",
+                "output": [],
+                "confidence": 0.0
+              },
+              {
+                "step": 3,
+                "agent": "LLMDiagnosisAgent",
+                "action": "Generated clinical assessment using Gemini 2.0 Flash with patient profile and retrieved context",
+                "output": "Structured JSON assessment with conditions, care plan, and follow-up questions",
+                "confidence": 0.85
+              },
+              {
+                "step": 4,
+                "agent": "RiskAssessmentAgent",
+                "action": "Computed multi-factor risk score using symptom severity, patient demographics, and dangerous combinations",
+                "output": "Risk level, score, and trajectory prediction",
+                "confidence": 0.9
+              },
+              {
+                "step": 5,
+                "agent": "RecommendationAgent",
+                "action": "Mapped symptoms to specialist types, diagnostic tests, and evidence-based precautions",
+                "output": "Personalised recommendations, tests, and lifestyle advice",
+                "confidence": 0.88
+              },
+              {
+                "step": 6,
+                "agent": "DoctorRecommendationAgent",
+                "action": "Matched symptoms to specialist database, ranked by rating and experience",
+                "output": "Top-ranked specialists with match reasoning",
+                "confidence": 0.87
+              }
+            ],
+            "evidence_categories": [],
+            "reasoning_note": "This assessment was produced by a multi-agent AI pipeline combining symptom extraction, retrieval-augmented generation (RAG) from a curated medical knowledge base, large language model synthesis, and rule-based risk classification. It is intended as a decision support tool only and does NOT constitute a medical diagnosis.",
+            "limitations": [
+              "This assessment is based solely on self-reported symptoms and does not include physical examination findings.",
+              "Laboratory results, imaging, and clinical history are not available to this system.",
+              "AI-generated assessments carry inherent uncertainty and should not replace professional medical advice.",
+              "Symptom overlap between conditions means multiple diagnoses may be plausible simultaneously.",
+              "No external medical knowledge was retrieved \u2014 assessment relies entirely on LLM training data."
+            ],
+            "data_sources": [
+              "Curated medical knowledge base (29 documents across 12 clinical categories)",
+              "Gemini 2.0 Flash large language model",
+              "Rule-based symptom-risk mapping engine",
+              "Specialist database (10 verified physicians)"
+            ],
+            "pipeline_version": "HealthPilot AI v3.0 \u2014 Multi-Agent Clinical Decision Support"
+          }
+        },
+        "agent_pipeline": [
+          "SymptomExtractionAgent",
+          "RAGRetrievalAgent",
+          "LLMDiagnosisAgent",
+          "RiskAssessmentAgent",
+          "RecommendationAgent",
+          "DoctorRecommendationAgent",
+          "RiskDecisionAgent",
+          "ReportGeneratorAgent"
+        ]
+      },
+      "risk_level": "LOW",
+      "confidence_score": 0.35,
+      "created_at": "2026-04-13T03:12:06.085657+00:00"
+    }
+  ],
+  "next_chat_id": 13
+}
